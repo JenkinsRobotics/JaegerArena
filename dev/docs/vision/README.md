@@ -1,15 +1,11 @@
-# dev/docs/vision/
+# Product vision
 
-The north-star documents for this repo — architecture, positioning,
-the thing every "where does this code/boundary go" question gets tested
-against. Changes rarely, and only on a deliberate, ratified decision —
-not a drive-by edit alongside an unrelated commit.
+Jaeger Arena is the shared evaluation and training arena for the Jaeger ecosystem.
+Its north star is measured improvement across comparable attempts, with an engaging
+progression system for agents and humans.
 
-For the ecosystem-wide north star (the tier map, the two laws, the
-connection rule), see JaegerOS's own
-[`dev/docs/vision/THREE_TIER_STRUCTURE.md`](https://github.com/JenkinsRobotics/JaegerOS/blob/master/dev/docs/vision/THREE_TIER_STRUCTURE.md)
-and [`JAEGER_ECOSYSTEM.md`](https://github.com/JenkinsRobotics/JaegerOS/blob/master/dev/docs/vision/JAEGER_ECOSYSTEM.md)
-— condensed into this template's own `CONVENTIONS.md`. This directory is
-for *this repo's* vision, one layer down from the ecosystem-wide one.
+- [Product scope](PRODUCT_SCOPE.md)
+- [Architecture (planned)](ARCHITECTURE.md)
+- [Integration baseline](INTEGRATIONS.md)
 
-Empty until this repo has a real vision doc.
+See [current status](../reality/STATUS.md) for implemented behavior.

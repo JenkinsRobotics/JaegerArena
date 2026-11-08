@@ -1,8 +1,7 @@
-# dev/docs/history/
+# History
 
-Per-release or per-milestone write-ups — what happened and why, in the
-order it happened. Append a new file per milestone (e.g.
-`0.1.0_first_module.md`) rather than editing old ones; history doesn't
-get rewritten, only added to.
-
-Empty until this repo ships its first milestone.
+- **2026-11-08 — Project foundation:** established Jaeger Arena as the standalone
+  evaluation and training app; documented reuse of JaegerAgent's existing benchmark
+  and capability state; added a project website with an illustrative training-loop
+  explorer. Preserved the inherited generic module/workspace template under
+  `dev/template-reference/`. No Arena runtime or training backend was introduced.

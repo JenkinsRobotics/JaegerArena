@@ -62,6 +62,6 @@ htmlcov/
 # Operator/instance state, if this repo ever runs standalone
 .jaeger_os/
 
-# Real (non-example) config generated from the .example templates —
-# keep the templates tracked, never the filled-in versions.
-pyproject.toml
+# Local browser verification artifacts
+.local/
+node_modules/

@@ -1,5 +1,9 @@
 # Conventions
 
+Jaeger Arena is a standalone suite app in its foundation stage. The inherited
+module and hardware scaffolds are preserved under `dev/template-reference/`;
+they are not an Arena runtime or an integration contract.
+
 Every repo in the Jaeger ecosystem (JaegerOS, Jaeger-AI, modules, hardware
 packages, projects) follows these rules. They're condensed from
 `JaegerOS/dev/docs/vision/THREE_TIER_STRUCTURE.md` — read that doc for the
@@ -41,7 +45,7 @@ building:
 - **Slots + `module.yaml` (Mind ↔ engine modules)** — a module directory
   declares a `slot`, its bus topics (`consumes`/`produces`), the tools it
   serves, its factory, and `requires_libraries`/`requires_platform`. This
-  is what `{{package_name}}/module.yaml.example` in this template is.
+  is what `dev/template-reference/{{package_name}}/module.yaml.example` in this template is.
 - **The NDJSON protocol (outside apps ↔ the Mind)** — one wire contract,
   many transports. Never pip-dissect the agent to embed it; speak the
   protocol instead.
@@ -82,7 +86,7 @@ and don't scaffold a workspace for something meant to be reused.
 ## Versioning & pinning
 
 - Projects and modules **pin** a JaegerOS release range
-  (`pyproject.toml.example`'s `dependencies`); they never fork the
+  (`dev/template-reference/pyproject.toml.example`'s `dependencies`); they never fork the
   framework to make a local change.
 - A **contract change** (a topic name, a `module.yaml` field's meaning, a
   wire format, the capability-layer API) is a **version bump**, not a

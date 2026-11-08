@@ -1,27 +1,48 @@
-# STATUS
+# Current status — 2026-11-08
 
-> Truthful, or it's worthless. Any commit that changes behavior updates
-> this file in the same commit — see `CONVENTIONS.md` → "STATUS stays
-> truthful." This is a seed; replace everything below once the repo has
-> real history.
+**Jaeger Arena is in its foundation stage. No Arena application or model-training
+backend is implemented in this repository.** `VERSION` is an unreleased development
+marker, not an installable application release.
 
-## Current state — {{DATE}}
+## Implemented
 
-- **Repo:** `{{REPO_NAME}}` — {{DESCRIPTION}}
-- **Version:** see `VERSION` / `pyproject.toml`'s `dynamic` version field
-- **JaegerOS pin:** not yet set — fill in once `pyproject.toml.example`
-  has a real dependency range (see README checklist)
-- **What works:** nothing yet — this is a freshly-scaffolded template
-  instance
-- **What's stubbed:** every `*.example` file under `src/{{package_name}}/`
-  — `module.yaml`, `config.py`, `node.py`, the module-contract test
-- **Known gaps:** (list real ones here as they appear; delete this line
-  once there's real content)
+- README, product scope, intended architecture, integration baseline, and an ordered
+  roadmap with acceptance criteria.
+- Static project website in `docs/`, with a six-step interactive concept walkthrough,
+  progression explanation, ecosystem map, and roadmap. All walkthrough records
+  are illustrative and do not execute real work.
+- Dependency-free site/documentation checks and CI that fails on validation errors.
+- Original module/workspace examples retained as inactive `dev/template-reference/`
+  material. They are not an Arena runtime or dependency pin.
 
-## How to update this file
+## Existing elsewhere; not integrated here
 
-1. Ship a behavior change.
-2. In the same commit, add or edit a line above reflecting the new truth.
-3. If something moves from "planned" to "shipped," delete it from
-   `../roadmap/` (or mark it done there) — don't leave the same fact
-   living in two docs, per `CONVENTIONS.md` law 1.
+JaegerAgent provides skill benchmarking, benchmark history, and per-capability state
+with promotion/demotion machinery. Source inspection informed the planned adapter;
+Arena does not yet import those records or control agent execution. Avatar packs
+and rendering remain owned by JaegerAvatar.
+
+## Planned
+
+Participant/configuration records, durable evidence storage, challenge execution,
+independent evaluators, XP/mastery services, training adapters, competitions,
+Jaeger ecosystem integrations, and human growth tracks. There are no application
+install/run commands or finalized public API schemas yet.
+
+## Verification
+
+Completed locally on 2026-11-08:
+
+- `python3 scripts/check_site.py`: local/repository links, metadata, unique HTML
+  IDs, image alternative text, and active-document template placeholders passed.
+- `node --check docs/assets/site.js` and `git diff --check` passed.
+- Chromium walkthrough: all six explorer steps, keyboard selection and wrapping,
+  section navigation, JavaScript-disabled fallback, and reduced-motion mode passed.
+- Layouts at 320, 390, 768, 1024, and 1440 pixels had no horizontal overflow;
+  desktop and mobile screenshots were visually reviewed. No browser script or
+  resource errors were reported. This is not a full accessibility audit.
+
+The existing GitHub Pages publishing route uses `gh-pages`; source lives in `docs/`
+on `master`. See [site guide](../../../docs/SITE.md). CI validates source and does
+not synchronize the publishing branch. No agent execution, learning, persistent
+progress, or live integration is claimed by these website checks.
