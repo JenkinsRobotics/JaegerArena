@@ -46,8 +46,9 @@ for the branch/folder setting and build troubleshooting.
 
 ## Content maintenance
 
-The app is planned. Keep that status visible, preserve the illustrative label on
-the explorer, and update the README and `dev/docs/reality/STATUS.md` when runtime
-features are actually implemented. Link to source documents on GitHub rather than
+The local account/profile/MCP foundation is implemented; games, public backend
+hosting, and training remain planned. Preserve the illustrative label on the
+website explorer and keep it distinct from the real application. Update the README
+and `dev/docs/reality/STATUS.md` when runtime features ship. Link to documents on GitHub rather than
 relative paths outside the published directory. Keep local assets relative so
 the site works beneath `/JaegerArena/` as well as at a local server root.
