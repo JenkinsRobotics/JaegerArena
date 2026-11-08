@@ -76,12 +76,14 @@ def main():
         errors.append('Missing title, language, description, or viewport metadata')
     for ref in page.refs:
         check_ref(index, ref, page.ids)
-    active_docs = [ROOT / 'README.md', ROOT / 'AGENTS.md', SITE / 'SITE.md', *sorted((ROOT / 'dev/docs').rglob('*.md'))]
+    active_docs = [ROOT / 'README.md', ROOT / 'AGENTS.md', SITE / 'SITE.md', SITE / 'BRAND.md', *sorted((ROOT / 'dev/docs').rglob('*.md'))]
     for path in active_docs:
         content = path.read_text()
         for ref in re.findall(r'\[[^\]\n]+\]\(([^)\s]+)\)', content):
             check_ref(path, ref)
-    for path in [index, *active_docs, *sorted((SITE / 'assets').glob('*'))]:
+    text_assets = [p for p in sorted((SITE / 'assets').rglob('*'))
+                   if p.is_file() and p.suffix in {'.css', '.js', '.svg', '.html', '.json', '.txt', '.md'}]
+    for path in [index, *active_docs, *text_assets]:
         if re.search(r'\{\{[A-Za-z_]+\}\}', path.read_text()):
             errors.append(f'{path.relative_to(ROOT)}: unfilled template placeholder')
     if not (SITE / '.nojekyll').is_file():

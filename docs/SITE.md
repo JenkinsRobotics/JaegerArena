@@ -8,9 +8,11 @@ explorer. It does not run agents, store learner progress, or train models.
 ## Source and local preview
 
 `docs/` on `master` is the source of truth. `index.html`, `assets/site.css`,
-`assets/site.js`, and `assets/arena.svg` are dependency-free static files. The
-palette retains the inherited Jaeger dark/blue identity. The Arena mark and
-diagram are repository-native SVGs. No external fonts, analytics, or media are
+`assets/site.js`, and local images under `assets/brand/` form a dependency-free
+static site. The supplied Jaeger Arena artwork is the hero and README logo; a
+compact helmet/A derivative is used in navigation and browser icons. See
+[brand asset notes](BRAND.md) for provenance and source handling. The palette
+retains the dark/blue identity. No external fonts, analytics, or media are
 loaded. `.nojekyll` allows direct static serving.
 
 From the repository root:

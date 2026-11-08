@@ -22,3 +22,8 @@
   boundary, owner-configured recurring practice, and retained learning artifacts.
   Clarified that model updates require an actual trainer; updated the project site.
   No new runtime functionality or unattended jobs were introduced.
+
+- **2026-11-08 — Arena branding:** adopted the supplied helmet/A arena artwork
+  for the website hero, README, and site sharing metadata, with a compact icon
+  derivative for navigation and browser tabs. Updated the local app icon and
+  kept the supplied artwork unchanged. No account or progression rules changed.

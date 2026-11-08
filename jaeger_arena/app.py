@@ -240,7 +240,7 @@ def create_app(settings=None):
 
     @app.get('/favicon.ico', include_in_schema=False)
     def favicon():
-        return FileResponse(WEB / 'arena.svg', media_type='image/svg+xml')
+        return FileResponse(WEB / 'arena-icon.png', media_type='image/png')
 
     app.mount('/assets', StaticFiles(directory=WEB), name='assets')
     app.mount('/mcp', mcp_app)

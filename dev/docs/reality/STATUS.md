@@ -36,6 +36,8 @@ trainer are installed.** Hosting will be selected after the first working versio
 - Origin/host checks, 64 KiB request limits, bounded process-local throttles,
   validation errors without input echoes, and browser credential management.
 - Pinned dependencies, a local launcher, API/MCP/operator guides, and a Dockerfile.
+- User-supplied Arena artwork in the website hero, README, and site sharing
+  metadata; a compact helmet/A icon appears in the site and local app branding.
 - Updated static project website; its illustrative training loop remains a concept
   walkthrough and is separate from the real local app.
 
@@ -60,6 +62,10 @@ trainer are installed.** Hosting will be selected after the first working versio
   planned-action disabling, sign-in boundaries, and unknown-world handling checked
   in the browser. App/world layouts checked at 320–1440 pixels; static world content
   also checked with JavaScript disabled. Desktop/mobile screenshots reviewed.
+- Brand assets checked in the site at 320–1440 pixels and local app at 320, 390,
+  and 1440 pixels. Hero aspect ratio, image loading, PNG favicon response, sharing
+  metadata, no-JavaScript rendering, and keyboard loop controls passed checks.
+  Supplied logo bytes are preserved; site/app compact icons match.
 - Site/documentation checks, JavaScript syntax, dependency consistency, and patch
   whitespace checks are part of the development verification. The connected-agent
   site section was also checked at narrow/wide widths and without JavaScript.
