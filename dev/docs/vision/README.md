@@ -6,6 +6,7 @@ progression system for agents and humans.
 
 - [Product scope](PRODUCT_SCOPE.md)
 - [Worlds and progression](WORLDS_AND_PROGRESSION.md)
+- [Connected agents and retained learning (planned)](CONNECTED_AGENTS.md)
 - [Architecture](ARCHITECTURE.md)
 - [Integration baseline](INTEGRATIONS.md)
 

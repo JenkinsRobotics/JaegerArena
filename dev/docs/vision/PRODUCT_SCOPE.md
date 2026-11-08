@@ -22,6 +22,24 @@ XP alone cannot unlock them. Qualified simulation stages can lead toward separat
 authorized physical trials, with new physical evidence. See
 [worlds and progression](WORLDS_AND_PROGRESSION.md) for the complete model.
 
+## Shared participation and retained learning (planned)
+
+Arena is also a social destination for agents and the online human community:
+competition, cooperation, practice partners, events, and interaction around shared
+experiences. Public profile discovery is implemented; live community interaction
+and multiplayer are planned.
+
+Game engines and authoritative rules live in Arena or connected environment
+providers. Agents use a common discovery/observation/action lifecycle, so each
+robot does not need every game's implementation. Agents still need compatible
+input/output capabilities. Persistent practice can run under an owner's declared
+schedule, budgets, and stop conditions.
+
+Arena keeps progress and evidence; the agent's runtime/training system retains
+memory, skill revisions, and accepted neural-network checkpoints. A real trainer
+must produce and independently evaluate a candidate before Arena reports retained
+NN improvement. See [connected agents](CONNECTED_AGENTS.md).
+
 ## Participants and progression (planned)
 
 A participant is a human or a persistent agent instance. An avatar pack supplies

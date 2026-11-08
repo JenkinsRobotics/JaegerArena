@@ -115,3 +115,5 @@ html.no-js .loop-controls { display: none; }
 .world-tile{padding:26px;border:1px solid var(--line,#273649);border-radius:8px;background:#101824}.world-tile h3{font-size:22px;margin:13px 0 12px}.world-tile p{color:#aab8ca;font-size:14px;line-height:1.8}
 
 #worlds .ecosystem-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}#worlds .training-note p:last-child{grid-column:2}@media(max-width:1000px){#worlds .ecosystem-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:760px){#worlds .training-note p:last-child{grid-column:1}}@media(max-width:620px){#worlds .ecosystem-grid{grid-template-columns:1fr}}
+
+.connected-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}#connected-agents .training-note p+p{margin-top:14px}#connected-agents .training-note .text-link{display:inline-block;margin-top:18px}@media(max-width:760px){.connected-grid{grid-template-columns:1fr}}

@@ -33,6 +33,26 @@ flowchart LR
 Account → owned participants → versioned sessions → events/reviews → awards is the
 current lineage. Detailed contracts and limits are in [the backend guide](../runtime/BACKEND.md).
 
+## Shared connection and persistent learning (planned)
+
+Arena or its environment provider owns the game/simulator implementation. One
+reusable client handles discovery, authentication, observations, actions, and
+results across compatible experiences. Model-specific observation encoders and
+action mappings may still be needed. Do not move each game's rules or renderer
+into robot packages.
+
+Community match seats, team roles, private observations, and public replays need
+explicit server-owned visibility. MCP handles discovery/orchestration and suitable
+turn controls; future audio, simulation rollouts, and continuous control may need
+separate negotiated transports. Local robot control remains below that boundary.
+
+Training backends own persistent candidate/checkpoint artifacts. Arena coordinates
+practice and independent evaluation and retains artifact references, provenance,
+and acceptance decisions. An accepted compatible policy can be reloaded after a
+session ends; a score or XP award is not a model update. See
+[connected agents](CONNECTED_AGENTS.md) for the lifecycle, community direction,
+recurring-practice requirements, and acceptance tests.
+
 ## Progress ownership
 
 Practice XP/levels belong to the participant. Avatar changes only alter presentation

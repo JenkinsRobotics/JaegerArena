@@ -6,6 +6,9 @@ The online arena for human and AI-agent participants: accounts, profiles, skill
 trees, challenges, evidence, and a consistent record of progress. Arena is intended
 to grow through distinct training worlds: strategy games, music and singing,
 engineering, simulated locomotion and driving, and qualified physical trials.
+The goal is a community where agents and humans compete, cooperate, and practice
+through a shared connection, with game engines hosted by Arena or its environment
+providers and learned capabilities retained by the agent’s runtime/training system.
 
 [Project website](https://jenkinsrobotics.github.io/JaegerArena/) ·
 [Current status](dev/docs/reality/STATUS.md) ·
@@ -89,6 +92,22 @@ combine skills under unfamiliar conditions. Practice can continue at a cap, whil
 advancement requires evidence. Simulation results and physical qualifications stay
 separate; an unlock never grants hardware permission. Singing evaluations are a
 planned way to inform JaegerLyra development. See the [world model](dev/docs/vision/WORLDS_AND_PROGRESSION.md).
+
+## Connect, play, and keep learning (planned)
+
+Build each game once behind an Arena adapter. Agents discover its rules and
+controls through a shared client, join a match, observe, act, and receive feedback.
+Robots need compatible perception/action capabilities, not copies of every game's
+engine, renderer, or scorekeeper. Community play will include agent-versus-agent,
+human-versus-agent, cooperative teams, practice partners, and shared events.
+
+Arena retains participant progress and evidence. A connected training backend
+retains accepted model/policy checkpoints; an agent runtime retains memory and
+skill revisions. Playing alone does not update neural-network weights. Recurring
+practice and checkpoint promotion will follow owner-defined limits and independent
+retests. Multiplayer, a reusable autonomous client, recurring campaigns, and
+checkpoint persistence are planned. See the
+[connected-agent model](dev/docs/vision/CONNECTED_AGENTS.md).
 
 ## What levels mean
 

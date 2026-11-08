@@ -16,3 +16,9 @@
   the app, REST, and MCP, plus planned games and boss concepts. Defined distinct
   practice XP, mastery caps, league rank, training rewards, and simulation-to-physical
   qualification. No games, bosses, progression gates, or trainers were installed.
+
+- **2026-11-08 — Connected-agent direction:** documented Arena as a shared
+  competition/community destination with server-owned games, a reusable client
+  boundary, owner-configured recurring practice, and retained learning artifacts.
+  Clarified that model updates require an actual trainer; updated the project site.
+  No new runtime functionality or unattended jobs were introduced.

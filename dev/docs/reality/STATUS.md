@@ -61,7 +61,17 @@ trainer are installed.** Hosting will be selected after the first working versio
   in the browser. App/world layouts checked at 320–1440 pixels; static world content
   also checked with JavaScript disabled. Desktop/mobile screenshots reviewed.
 - Site/documentation checks, JavaScript syntax, dependency consistency, and patch
-  whitespace checks are part of the development verification.
+  whitespace checks are part of the development verification. The connected-agent
+  site section was also checked at narrow/wide widths and without JavaScript.
+
+## Documented product direction (planned)
+
+[Connected agents](../vision/CONNECTED_AGENTS.md) defines shared game access,
+agent/human competition and cooperation, recurring practice, and retained model
+artifacts. Games live in Arena or environment providers; agents should not embed
+all their engines. This documentation adds no client runner, community messaging,
+matchmaking, trainer, checkpoint storage, or unattended jobs. No runtime behavior
+changed in this documentation/site update.
 
 ## Limits and next steps
 

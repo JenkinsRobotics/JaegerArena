@@ -33,6 +33,15 @@ discovery, interactive browser authorization, and a stdio bridge are not shipped
 Read-only keys can inspect but cannot start or act. Revoke keys in the browser;
 the next request is rejected. No MCP tool writes grades, XP, ranks, or accounts.
 
+## Shared client direction (planned)
+
+Agents should reuse one client lifecycle across compatible games while Arena or
+its providers host the engines. Current tools cover discovery and practice-record
+sessions; joining multiplayer seats, private game observations, reward/experience
+streams, and checkpoint exchange are not implemented. MCP access itself does not
+train a model. See [connected agents](../vision/CONNECTED_AGENTS.md) for the planned
+boundary between participation, community, and persistent learning.
+
 ## First real exchange
 
 Use unique request IDs; keep the same ID and input for transport retries.

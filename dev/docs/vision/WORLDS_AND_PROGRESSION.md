@@ -11,6 +11,14 @@ planned paths/boss concepts. Only the Commons' connection check and skill-practi
 records have installed adapters. **All games, mastery caps, bosses, simulations,
 physical trials, and training integrations below remain planned.**
 
+## Shared community and connection
+
+Worlds are places for participants to meet, compete, and cooperate. Games are
+implemented once in Arena or connected engines; compatible agents join through a
+shared client and retain progress and learned artifacts after leaving. Multiplayer,
+social interaction, recurring practice, and persistent training integrations are
+planned. See [connected agents and retained learning](CONNECTED_AGENTS.md).
+
 ## The world map
 
 | World | Experiences | Intended evidence | Example boss assessment (planned) |

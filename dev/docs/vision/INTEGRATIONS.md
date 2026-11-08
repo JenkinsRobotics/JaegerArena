@@ -30,6 +30,20 @@ evaluation, grader integrity, reward calibration, or reliable automatic rollback
 across every upstream path. Arena must verify those properties before claiming
 them. Importing an existing level records its source, not proof of broader ability.
 
+## Shared client and learning ownership (planned)
+
+Provide a reusable Arena client for JaegerAgent and other compatible runtimes,
+instead of shipping every game's engine with every robot. Arena's game adapter
+owns rules and outcomes; the client reads advertised observations/actions and the
+agent chooses its move. High-rate rollout or media transports can be added beneath
+the same session identity without duplicating game implementations.
+
+An owner-selected training backend keeps accepted neural-network checkpoints and
+optimizer state where needed. Arena retains evidence, lineage, and acceptance
+references. Agent memory/skill updates remain distinct from NN updates; avatar
+packs do not store authoritative learned progress. See
+[connected-agent boundaries](CONNECTED_AGENTS.md).
+
 ## Planned integration sequence
 
 1. Import benchmark artifacts and capability state read-only. Preserve provenance,

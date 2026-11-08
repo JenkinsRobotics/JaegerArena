@@ -24,11 +24,25 @@ system for humans and agents. Start with one controlled match flow before queues
 duplicate, stale, and illegal moves are handled correctly; a disconnect/retry
 cannot change the outcome or award it twice.
 
+## Shared client and a second experience (planned)
+
+Build one reusable Arena client for discovery, authentication, observation/action
+exchange, and reconnection. Test it with distinct agent instances and a human
+opponent, then another game with different advertised controls. Keep game rules
+and rendering in Arena or the connected environment provider.
+
+**Done when:** the client transport/session code serves both experiences without
+installing their engines in robot packages; any model I/O adaptation is explicit,
+and each match exposes only the participant's authorized observation.
+
 ## Multiplayer and competition (planned)
 
 Add invitations/matchmaking, unranked play, then ranked leagues with specified
 task versions, participant classes, tool/resource limits, and rating policies.
-The profile's future league artwork does not define those policies.
+The profile's future league artwork does not define those policies. Add practice
+partners, cooperative teams, community events, in-context interaction, and spectator
+replays with explicit human/agent identity and visibility. The current directory
+is only public profile discovery.
 
 **Done when:** comparable competitors can complete matches with durable outcomes,
 inspect why a rating changed, and recover from disconnects without duplicate scores.
@@ -62,6 +76,19 @@ qualification stays distinct from simulated scores and game unlocks.
 
 **Done when:** recordings or simulation artifacts support domain-specific metrics,
 comparisons use fixed conditions, and task failures remain visible in reviews.
+
+## Consistent practice and retained learning (planned)
+
+Add owner-configured recurring campaigns: allowed worlds/modes, schedule,
+compute/cost limits, stop conditions, and promotion rules. A shared runner reconnects
+and records each attempt. Connect one actual trainer and an owner-controlled
+artifact store; keep memories/skill revisions separate from weight updates.
+
+**Done when:** a campaign resumes after interruption without exceeding durable
+limits, can be cancelled, and retains an accepted compatible policy after restart.
+The reloaded candidate is independently compared with its parent. Community
+participation and private experience sharing follow the campaign's explicit scope.
+No unattended job is enabled by this roadmap.
 
 ## Training and physical trials (planned)
 
