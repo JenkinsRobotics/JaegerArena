@@ -1,87 +1,65 @@
-# Architecture (planned)
+# Architecture
 
-This is an implementation direction, not a released API or wire schema. Arena has
-no runtime, database, or training connector yet. Public contracts should be fixed
-with actual consumers; avoid extracting speculative shared packages.
-
-## Components and ownership (planned)
+Arena is an online service with a locally runnable 0.2 foundation. Public hosting
+is deferred. Its app, REST endpoints, and MCP tools call one service layer; neither
+the browser nor an agent computes its own authoritative awards.
 
 ```mermaid
 flowchart LR
-    UI[Arena app] --> Core[Campaign and evaluation coordinator]
-    Core --> Runner[Execution adapters]
-    Runner --> Agent[JaegerAgent]
-    Runner --> Human[Human task submissions]
-    Runner --> Evidence[Attempt and artifact records]
-    Evidence --> Eval[Independent evaluators]
-    Eval --> Progress[Progression decisions]
-    Progress --> UI
-    Eval --> Train[Training adapters]
-    Train --> Candidate[Versioned candidate]
-    Candidate --> Runner
-    Avatar[JaegerAvatar presentation] -. participant identity .-> UI
+    Human[Human browser] --> HTTP[REST API]
+    Agent[Agent MCP client] --> MCP[Official MCP transport]
+    HTTP --> Service[Arena service and ownership rules]
+    MCP --> Service
+    Service --> Data[SQLite records and audit trail]
+    Service --> Adapter[Challenge adapters]
+    Evaluator[Scoped operator evaluator] --> HTTP
+    Traits[JaegerAvatar metadata snapshot] --> Service
 ```
 
-The coordinator schedules runs and checks budgets. Runners execute through supported
-interfaces; evaluators consume evidence. Training backends return a candidate
-configuration or checkpoint, and independent assessment determines acceptance.
-The app reads decisions from the responsible service; it does not calculate a
-second version of mastery in browser code.
+## Implemented responsibilities
 
-## Evidence model (planned)
+- `app.py`: HTTP routes, browser sessions, request boundary, and app serving.
+- `mcp_server.py`: official SDK transport and seven participant-bound tools.
+- `service.py`: ownership, credentials, profiles, histories, sessions, reviews,
+  and the single practice-XP authority.
+- `database.py`: v1 durable records and serialized mutation transactions.
+- `challenges.py`: descriptor/control schemas and trusted adapter transitions.
+- `models.py`: validated API inputs; generic action payloads are validated by adapters.
+- `data/`: extensible skill catalogue and attributed avatar profile references.
+- `web/`: profile, skill-tree, community, challenge, history, and key-management UI.
 
-| Record | Information to preserve |
-| --- | --- |
-| Participant | Stable identity and kind: human or agent; optional avatar reference. |
-| Configuration | Model/checkpoint, prompts, skill revisions, tools, runtime version, and environment fingerprint. |
-| Challenge | Immutable task and dataset versions, difficulty, evaluator, budget, and practice/assessment split. |
-| Attempt | Unique run identity, participant/configuration/challenge references, start/end times, outcome, and artifacts. |
-| Assessment | Evaluator and rubric version, scores, uncertainty where applicable, feedback, and evidence references. |
-| Training run | Baseline, method/backend, input evidence, resource use, changed components, and candidate outputs. |
-| Decision | Policy version, qualifying assessments, promotion/rejection/rollback, and previous accepted version. |
+Account → owned participants → versioned sessions → events/reviews → awards is the
+current lineage. Detailed contracts and limits are in [the backend guide](../runtime/BACKEND.md).
 
-Use explicit units for measurements (for example, duration in seconds) and document
-dimensionless score ranges. External adapters preserve the source contract and
-record any normalization instead of silently changing units or meanings. Publishing
-competition entries should use intentionally selected evidence, not credentials,
-private prompts, or unrelated participant records.
+## Progress ownership
 
-## One authority per level (planned)
+Practice XP/levels belong to the participant. Avatar changes only alter presentation
+and declared traits. Skill evidence retains the configuration hash, challenge and
+rubric versions; it is not normalized into a universal mastery score. Competitive
+rank is currently Unranked for everyone.
 
-JaegerAgent already writes capability state. The first adapter should import its
-results as source evidence and display its existing level, clearly attributed.
-Importing a result must not invoke its scorer again or write another capability
-run. Deduplicate by stable source identity plus source revision/run identity.
+Arena's practice level is intentionally separate from JaegerAgent's capability
+level. A future importer must preserve and attribute the upstream value, deduplicate
+source attempts, and avoid writing a second capability run. If ownership moves,
+use a reviewed contract and a single writer. See [integration baseline](INTEGRATIONS.md).
 
-Arena's independent certification policy may eventually differ from an agent's
-local practice level. If introduced, name and version that distinction explicitly;
-do not display two incompatible values as the same level. A later migration of
-policy ownership needs a reviewed contract and a single writer. See
-[integration baseline](INTEGRATIONS.md).
+## Extension points and next work (planned)
 
-## Training semantics (planned)
+Tic-tac-toe will be the first game adapter. Add a match record with seats/opponents,
+legal turn controls, a versioned ruleset, and deterministic terminal results; bind
+each action to an authenticated seat. Reuse ownership, retry handling, event logs,
+and review presentation. No match or game logic is shipped in 0.2.
 
-Support distinct change types: skill or procedure revisions; prompt changes;
-memory changes; and actual model/policy updates through a training backend.
-Each run records the before/after configuration and candidate artifacts. Model
-training needs a backend with an optimizer and reward/trajectory inputs; this
-repository does not provide one yet.
+Later adapters can represent coding tasks, simulations, and physical tests, with
+appropriate evidence, metrics/units, and trusted evaluation. Instrumented physical
+trials must remain behind JaegerOS capabilities and safety boundaries. A manual
+practice note is not sensor evidence or proof that a physical test occurred.
 
-Practice tasks can supply feedback to training. Reserved assessment tasks must
-remain independent of the learner's edits and training data. Grader versions and
-grading conditions are part of the evidence. A higher training score alone is
-insufficient for promotion. Regression gates and repeated assessment results should
-support acceptance decisions, with a retained previous version for recovery.
+Training campaigns will distinguish skill/procedure, prompt, memory, and model/
+policy changes. A reinforcement-learning backend must consume experience/rewards
+and produce a changed policy/checkpoint; reserved assessment and regression gates
+then determine acceptance. No optimizer, rollout collector, automatic grader,
+training scheduler, or promotion/rollback pipeline is implemented here yet.
 
-## Execution boundary (planned)
-
-Use supported process/service APIs for JaegerAgent; avoid importing private engine
-internals or copying the execution loop. Begin with read-only result import before
-adding job control. Benchmark execution runs task code and will need isolation,
-resource limits, cancellation, and explicit tool scopes in the runner. A static
-website is not a runner. Physical or simulated robot challenges continue through
-JaegerOS capabilities and cannot bypass lower-level safety.
-
-Storage technology, transport, authentication, model-training provider, and deployment
-topology remain implementation decisions. Define them when the first working
-loop provides real requirements, and pin dependencies then.
+Keep the implementation in this repo until real consumers justify shared contract
+packages. Do not fork agent engines or make avatar packs the authority for progress.

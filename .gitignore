@@ -65,3 +65,7 @@ htmlcov/
 # Local browser verification artifacts
 .local/
 node_modules/
+.arena/
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal

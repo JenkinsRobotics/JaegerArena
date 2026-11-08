@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jaeger-arena"
+version = "0.2.0"
+description = "Accounts, evidence, progression, and MCP access for the Jaeger online arena"
+requires-python = ">=3.11"
+dependencies = ["fastapi==0.162.2", "uvicorn==0.54.0", "mcp==1.30.0", "argon2-cffi==25.1.0"]
+
+[project.optional-dependencies]
+dev = ["pytest==9.2.0", "httpx==0.28.1", "PyYAML==6.0.3"]
+
+[project.scripts]
+jaeger-arena = "jaeger_arena.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["jaeger_arena*"]
+
+[tool.setuptools.package-data]
+jaeger_arena = ["data/*.json", "web/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -2,10 +2,13 @@
 
 **Train. Compete. Grow.**
 
-Arena is a standalone app for testing, scoring, training, and improving agents,
+Arena is a standalone online arena for testing, scoring, training, and improving agents,
 with human participation and growth tracking in the same product. It is intended
 to provide consistent evaluation and progression across the Jaeger ecosystem.
-The application behavior below is **planned**.
+The 0.2 foundation implements accounts, owned human/agent participants, profiles,
+community search, skill trees, authenticated MCP, and recorded practice sessions.
+The broader assessment/training loop below remains **planned**; see
+[current status](../reality/STATUS.md) for the implemented subset.
 
 ## Participants and progression (planned)
 
@@ -55,11 +58,13 @@ Reinforcement learning is a training integration, not a label for XP awards.
 Human habit tracking, skill/prompt optimization, and model/policy updates can share
 an app while retaining distinct methods and claims.
 
-## First useful release (planned)
+## Staged delivery
 
-Start with one local agent and one coding skill: capture an existing benchmark,
-show its evidence, produce a skill revision through an existing training path,
-retest independently, and record a promotion or rejection. The result must survive
-restart and repeated imports must not award extra progress. Expand to multi-agent
-competition, broader training backends, and human growth tracks after this loop
-works end to end.
+The first service slice provides identity, access, progression records, community
+profiles, and challenge/session interfaces. It contains no games. Tic-tac-toe is
+the next intended adapter, followed by comparable multiplayer competitions,
+JaegerAgent benchmark integration, training campaigns, and physical trials.
+
+The reference UI informs dark profiles, colored domains, progression, and community
+presentation. Marketing claims, fictional ranks, and screenshot statistics are not
+imported as participant data. Only actual reviewed attempts populate evidence.

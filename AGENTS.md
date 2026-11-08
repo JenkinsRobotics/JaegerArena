@@ -24,6 +24,13 @@ interactions keyboard accessible, and content visible without JavaScript.
 `dev/template-reference/` is inactive source material, not application code.
 Do not activate its module or hardware examples to fabricate an Arena runtime.
 
+The runtime lives in `jaeger_arena/`. REST and MCP must use the same service-level
+ownership and award rules. Runtime data belongs in ignored `.arena/` or `.local/`;
+never commit a database, password, session cookie, or credential value. Participant
+credentials may not grade attempts. Keep character traits separate from earned
+evidence, practice XP separate from competitive rank, and unimplemented games
+explicitly unavailable. Run `.venv/bin/python -m pytest -q` for runtime changes.
+
 For documentation/site changes run `python3 scripts/check_site.py` and
 `git diff --check`. Walk changed interactions in a browser and check narrow and
 wide layouts. Update `dev/docs/reality/STATUS.md` when behavior or verification

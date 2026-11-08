@@ -1,0 +1,347 @@
+{
+  "schema": "arena.skill-catalog/v1",
+  "version": "1",
+  "notes": "Extensible categories, not personality diagnoses. Skills require domain-specific assessments; prerequisites are advisory curriculum links, not execution permissions.",
+  "skills": [
+    {
+      "id": "physical",
+      "name": "Physical",
+      "parent_id": null,
+      "domain_id": "physical",
+      "color": "#32d5ab",
+      "kind": "domain",
+      "prerequisites": []
+    },
+    {
+      "id": "physical.strength",
+      "name": "Strength",
+      "parent_id": "physical",
+      "domain_id": "physical",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "physical.endurance",
+      "name": "Endurance",
+      "parent_id": "physical",
+      "domain_id": "physical",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "physical.coordination",
+      "name": "Coordination",
+      "parent_id": "physical",
+      "domain_id": "physical",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "social",
+      "name": "Social",
+      "parent_id": null,
+      "domain_id": "social",
+      "color": "#55aaff",
+      "kind": "domain",
+      "prerequisites": []
+    },
+    {
+      "id": "social.communication",
+      "name": "Communication",
+      "parent_id": "social",
+      "domain_id": "social",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "social.collaboration",
+      "name": "Collaboration",
+      "parent_id": "social",
+      "domain_id": "social",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "social.teaching",
+      "name": "Teaching",
+      "parent_id": "social",
+      "domain_id": "social",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "intellect",
+      "name": "Intellect",
+      "parent_id": null,
+      "domain_id": "intellect",
+      "color": "#ff9b54",
+      "kind": "domain",
+      "prerequisites": []
+    },
+    {
+      "id": "intellect.reasoning",
+      "name": "Reasoning",
+      "parent_id": "intellect",
+      "domain_id": "intellect",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "intellect.research",
+      "name": "Research",
+      "parent_id": "intellect",
+      "domain_id": "intellect",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "intellect.mathematics",
+      "name": "Mathematics",
+      "parent_id": "intellect",
+      "domain_id": "intellect",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "discipline",
+      "name": "Discipline",
+      "parent_id": null,
+      "domain_id": "discipline",
+      "color": "#ff635f",
+      "kind": "domain",
+      "prerequisites": []
+    },
+    {
+      "id": "discipline.consistency",
+      "name": "Consistency",
+      "parent_id": "discipline",
+      "domain_id": "discipline",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "discipline.planning",
+      "name": "Planning",
+      "parent_id": "discipline",
+      "domain_id": "discipline",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "discipline.task_completion",
+      "name": "Task completion",
+      "parent_id": "discipline",
+      "domain_id": "discipline",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "mental",
+      "name": "Mental",
+      "parent_id": null,
+      "domain_id": "mental",
+      "color": "#e7cc65",
+      "kind": "domain",
+      "prerequisites": []
+    },
+    {
+      "id": "mental.attention",
+      "name": "Attention",
+      "parent_id": "mental",
+      "domain_id": "mental",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "mental.reflection",
+      "name": "Reflection",
+      "parent_id": "mental",
+      "domain_id": "mental",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "mental.adaptability",
+      "name": "Adaptability",
+      "parent_id": "mental",
+      "domain_id": "mental",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "ambition",
+      "name": "Ambition",
+      "parent_id": null,
+      "domain_id": "ambition",
+      "color": "#b78aff",
+      "kind": "domain",
+      "prerequisites": []
+    },
+    {
+      "id": "ambition.goal_setting",
+      "name": "Goal setting",
+      "parent_id": "ambition",
+      "domain_id": "ambition",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "ambition.initiative",
+      "name": "Initiative",
+      "parent_id": "ambition",
+      "domain_id": "ambition",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "ambition.project_delivery",
+      "name": "Project delivery",
+      "parent_id": "ambition",
+      "domain_id": "ambition",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "technology",
+      "name": "Technology",
+      "parent_id": null,
+      "domain_id": "technology",
+      "color": "#6dbaff",
+      "kind": "domain",
+      "prerequisites": []
+    },
+    {
+      "id": "technology.programming",
+      "name": "Programming",
+      "parent_id": "technology",
+      "domain_id": "technology",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "technology.debugging",
+      "name": "Debugging",
+      "parent_id": "technology",
+      "domain_id": "technology",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "technology.tool_use",
+      "name": "Tool use",
+      "parent_id": "technology",
+      "domain_id": "technology",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "robotics",
+      "name": "Robotics",
+      "parent_id": null,
+      "domain_id": "robotics",
+      "color": "#59d4cf",
+      "kind": "domain",
+      "prerequisites": []
+    },
+    {
+      "id": "robotics.perception",
+      "name": "Perception",
+      "parent_id": "robotics",
+      "domain_id": "robotics",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "robotics.control",
+      "name": "Control",
+      "parent_id": "robotics",
+      "domain_id": "robotics",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "robotics.navigation",
+      "name": "Navigation",
+      "parent_id": "robotics",
+      "domain_id": "robotics",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "creative",
+      "name": "Creative",
+      "parent_id": null,
+      "domain_id": "creative",
+      "color": "#ef8fc5",
+      "kind": "domain",
+      "prerequisites": []
+    },
+    {
+      "id": "creative.writing",
+      "name": "Writing",
+      "parent_id": "creative",
+      "domain_id": "creative",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "creative.music",
+      "name": "Music",
+      "parent_id": "creative",
+      "domain_id": "creative",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "creative.visual_design",
+      "name": "Visual design",
+      "parent_id": "creative",
+      "domain_id": "creative",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "science",
+      "name": "Science",
+      "parent_id": null,
+      "domain_id": "science",
+      "color": "#a4ce7e",
+      "kind": "domain",
+      "prerequisites": []
+    },
+    {
+      "id": "science.experiment_design",
+      "name": "Experiment design",
+      "parent_id": "science",
+      "domain_id": "science",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "science.measurement",
+      "name": "Measurement",
+      "parent_id": "science",
+      "domain_id": "science",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "science.data_analysis",
+      "name": "Data analysis",
+      "parent_id": "science",
+      "domain_id": "science",
+      "kind": "skill",
+      "prerequisites": []
+    },
+    {
+      "id": "technology.testing",
+      "name": "Software testing",
+      "parent_id": "technology.programming",
+      "domain_id": "technology",
+      "kind": "skill",
+      "prerequisites": [
+        "technology.programming"
+      ]
+    }
+  ]
+}

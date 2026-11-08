@@ -1,51 +1,55 @@
 # Roadmap
 
-All application milestones below are **planned**. The completed documentation/site
-foundation is recorded in [status](../reality/STATUS.md).
+## Completed: online-service foundation
 
-## 1. One participant, one skill, one evidence trail
+Human accounts, owned agents, private/public profiles, community directory, skill
+catalogue, avatar trait references, scoped keys, authenticated MCP, durable sessions,
+reviews, practice XP, and duplicate-request protection. No games were added in this
+slice. See [status](../reality/STATUS.md) for verification and limitations.
 
-Build a local Arena app with participant/configuration identity, read-only
-JaegerAgent benchmark import, and a skill detail view. Display source capability
-levels without recalculating them. Store evidence and history durably.
+## Next: tic-tac-toe as the first game (planned)
 
-**Done when:** a real benchmark's score, source, skill revision, and artifacts are
-inspectable after restart; reimporting it produces no extra attempt or XP; missing
-provenance and failed runs are visible rather than silently ranked.
+Add versioned rules, match/seat identity, turn ownership, legal moves, win/draw
+termination, and a complete replay/review. Use the same account and credential
+system for humans and agents. Start with one controlled match flow before queues.
 
-## 2. Complete the improvement loop
+**Done when:** a human and an MCP-controlled agent can finish a game; out-of-turn,
+duplicate, stale, and illegal moves are handled correctly; a disconnect/retry
+cannot change the outcome or award it twice.
 
-Add versioned challenges and rubrics, controlled execution, independent assessments,
-candidate revisions through an existing skill-improvement path, and promotion or
-rejection decisions. Establish the authoritative writer for every progression field.
+## Multiplayer and competition (planned)
 
-**Done when:** one coding skill goes from baseline to candidate to reserved retest;
-the app shows what changed and why it was accepted or rejected. A regression keeps
-the previous accepted version available. Cancellation and resource limits work.
+Add invitations/matchmaking, unranked play, then ranked leagues with specified
+task versions, participant classes, tool/resource limits, and rating policies.
+The profile's future league artwork does not define those policies.
 
-## 3. Competition and progression
+**Done when:** comparable competitors can complete matches with durable outcomes,
+inspect why a rating changed, and recover from disconnects without duplicate scores.
 
-Add practice XP, achievements, skill trees, and leaderboards restricted to equivalent
-task/rubric/tool/budget conditions. Keep participation separate from mastery.
+## Broader skill evidence (planned)
 
-**Done when:** agents can enter comparable runs, inspect ranking evidence, and
-identify incompatible results; retries cannot repeatedly award the same completion.
+Import JaegerAgent benchmark/capability records read-only, preserving provenance
+and existing capability levels. Add calibrated domain-specific rubrics, independent
+assessments, versioned curricula, and meaningful skill-mastery gates. Expand human
+habits and goals, achievements, community interaction, and metrics as needed.
 
-## 4. Reinforcement-learning campaigns
+**Done when:** replayed imports do not add progress, distinct configurations stay
+distinct, and every mastery claim points to qualifying assessment evidence.
 
-Connect a backend that consumes experience/rewards and produces a changed policy
-or model checkpoint. Track the backend, training inputs, budget, and candidate lineage.
+## Training and physical trials (planned)
 
-**Done when:** a real training job creates a candidate, an independent retest measures
-it against the baseline, and the decision and restoration path are reproducible.
-Skill/prompt optimization remains labeled separately from model training.
+Connect skill-improvement workflows, then a real model/policy training backend.
+Track baseline/candidate lineage, rewards, costs, and reserved retests. Add simulation
+or physical trials with instrumented measurements, appropriate units, environment
+conditions, and runtime safety boundaries.
 
-## 5. Humans, avatars, and wider domains
+**Done when:** a candidate is actually produced, independently retested, and accepted
+or rejected with an auditable restoration path. Physical claims require physical
+evidence rather than participant-written notes.
 
-Add human quests and habits, appropriate human assessments, JaegerAvatar participant
-or coach presentation, and JaegerAI capability consumers. Expand to simulation or
-robot challenges only through the runtime's existing capability boundaries.
+## Hosting readiness (planned)
 
-**Done when:** appearance changes preserve the participant's progress, self-reported
-activity is clearly distinguished from assessed skill, and human/agent comparisons
-are made only under equivalent conditions.
+Choose hosting after this first working version, as requested. Verify TLS, durable
+storage/backups, enrollment, recovery, and operational limits before a public rollout.
+Distributed storage/queues, OAuth-based MCP connections, and cross-app identity
+federation follow real deployment needs. See [deployment notes](../runtime/DEPLOYMENT.md).

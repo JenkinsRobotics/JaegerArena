@@ -5,3 +5,9 @@
   and capability state; added a project website with an illustrative training-loop
   explorer. Preserved the inherited generic module/workspace template under
   `dev/template-reference/`. No Arena runtime or training backend was introduced.
+
+- **2026-11-08 — Online-service foundation (0.2):** added human accounts and owned
+  agents, profiles/community, a skill catalogue and avatar trait references, durable
+  session records, practice progression, trusted review, and authenticated MCP.
+  The user selected hosting later and explicitly deferred games; tic-tac-toe is
+  the intended first game, not part of this release.

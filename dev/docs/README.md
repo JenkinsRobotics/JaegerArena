@@ -6,9 +6,12 @@
 | [Product scope](vision/PRODUCT_SCOPE.md) | Participants, core loop, ownership, and product boundaries. |
 | [Architecture](vision/ARCHITECTURE.md) | Planned components, evidence model, and training semantics. |
 | [Integration baseline](vision/INTEGRATIONS.md) | Existing JaegerAgent machinery to reuse and open integration decisions. |
+| [Backend guide](runtime/BACKEND.md) | Accounts, access, records, progression, and evaluator operations. |
+| [MCP guide](runtime/MCP.md) | Agent connection and tool examples. |
+| [Deployment](runtime/DEPLOYMENT.md) | Local launch, environment settings, and hosting limits. |
 | [Roadmap](roadmap/README.md) | Ordered implementation milestones with acceptance criteria. |
 | [History](history/README.md) | Completed milestones and their rationale. |
 | [Site publishing](../../docs/SITE.md) | Local preview and the existing GitHub Pages publishing route. |
 
-Runtime architecture and interfaces are planned until implemented and verified.
+The runtime guides describe the implemented 0.2 foundation; roadmap items remain planned.
 Status is the authority on current behavior; vision documents describe intent.

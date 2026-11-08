@@ -1,7 +1,7 @@
 # Integration baseline
 
-Inspected on **2026-11-08**. These are upstream building blocks, not working Arena
-integrations. The adapter and application are **planned**.
+Inspected on **2026-11-08**. The Arena account/session application is implemented.
+The JaegerAgent benchmark adapter below is still **planned**.
 
 ## JaegerAgent: reuse this first
 
@@ -42,7 +42,21 @@ them. Importing an existing level records its source, not proof of broader abili
    when experience and reward records can actually drive updates.
 5. Expose assessed capabilities to JaegerAI and avatar presentation to JaegerAvatar.
 
-## Other ecosystem boundaries (planned)
+## JaegerAvatar references (implemented)
+
+The app snapshots 51 avatar/profile references from `avatar/v1`, with source paths
+and manifest hashes. Twenty profiles have declared trait groups: HEXACO-labeled
+personality fields, SPECIAL attributes, expression, and domains. The stored
+HEXACO-labeled group includes upstream names unchanged; Arena does not reinterpret
+it as a validated psychological assessment. No earned skill tree was found in the
+inspected packs, so Arena owns its extensible skill catalogue separately.
+
+`scripts/import_avatar_references.py` refreshes metadata only; it copies no
+renderers, character prompts, avatar assets, or earned levels. Profile selection
+currently reads the bundled reference snapshot; live rendering and cross-app
+identity federation are not wired.
+
+## Other ecosystem boundaries
 
 | Project | Arena relationship |
 | --- | --- |

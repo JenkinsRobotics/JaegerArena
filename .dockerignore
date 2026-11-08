@@ -1,0 +1,11 @@
+.git
+.venv
+.local
+.arena
+.env
+.env.*
+**/__pycache__
+**/*.sqlite3*
+dev
+docs
+tests

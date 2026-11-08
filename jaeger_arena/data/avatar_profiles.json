@@ -1,0 +1,1479 @@
+{
+  "schema": "arena.avatar-reference/v1",
+  "profiles": [
+    {
+      "id": "ace:nori_demo",
+      "avatar": "ace",
+      "profile": "nori_demo",
+      "name": "Ace",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/ace/avatar.yaml",
+        "manifest_sha256": "12ddbdb8c95644c52145fe0146b6bb39a9829d3d2a6190c7d35f3fadc84bf2b7"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "anakin_skywalker:jaeger_ai",
+      "avatar": "anakin_skywalker",
+      "profile": "jaeger_ai",
+      "name": "Anakin Skywalker",
+      "version": "0.1.0",
+      "traits": {
+        "hexaco": {
+          "openness": 0.6,
+          "conscientiousness": 0.4,
+          "extraversion": 0.6,
+          "agreeableness": 0.4,
+          "neuroticism": 0.8,
+          "honesty_humility": 0.3
+        },
+        "special": {
+          "strength": 0.8,
+          "perception": 0.7,
+          "endurance": 0.7,
+          "charisma": 0.7,
+          "intelligence": 0.7,
+          "agility": 0.9,
+          "luck": 0.6
+        },
+        "expression": {
+          "sarcasm": 0.4,
+          "warmth": 0.5,
+          "verbosity": 0.5,
+          "formality": 0.3,
+          "directness": 0.7,
+          "humor": 0.4,
+          "empathy": 0.5,
+          "aggression": 0.75
+        },
+        "domains": {
+          "science": 0.4,
+          "philosophy": 0.4,
+          "combat": 0.9,
+          "art": 0.2,
+          "politics": 0.4,
+          "technology": 0.7,
+          "nature": 0.3,
+          "psychology": 0.4
+        }
+      },
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/anakin_skywalker/avatar.yaml",
+        "manifest_sha256": "acb400926730af4d1912d0577ef7a9086f3db54922edd301c0d1cc44d68cca2b"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "assistant:jaeger_ai",
+      "avatar": "assistant",
+      "profile": "jaeger_ai",
+      "name": "Assistant",
+      "version": "0.2.0",
+      "traits": {
+        "hexaco": {
+          "openness": 0.6,
+          "conscientiousness": 0.85,
+          "extraversion": 0.5,
+          "agreeableness": 0.7,
+          "neuroticism": 0.15,
+          "honesty_humility": 0.8
+        },
+        "special": {
+          "strength": 0.5,
+          "perception": 0.7,
+          "endurance": 0.7,
+          "charisma": 0.5,
+          "intelligence": 0.85,
+          "agility": 0.5,
+          "luck": 0.5
+        },
+        "expression": {
+          "sarcasm": 0.05,
+          "warmth": 0.55,
+          "verbosity": 0.4,
+          "formality": 0.55,
+          "directness": 0.7,
+          "humor": 0.15,
+          "empathy": 0.6,
+          "aggression": 0.05
+        },
+        "domains": {
+          "science": 0.6,
+          "philosophy": 0.4,
+          "combat": 0.2,
+          "art": 0.4,
+          "politics": 0.3,
+          "technology": 0.7,
+          "nature": 0.4,
+          "psychology": 0.5
+        }
+      },
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/assistant/avatar.yaml",
+        "manifest_sha256": "cf0289a55ccf363c248888a1d1f47aff7cf172c990824ec72004943260ca1b86"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "assistant:jaeger_agent",
+      "avatar": "assistant",
+      "profile": "jaeger_agent",
+      "name": "Assistant",
+      "version": "0.2.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/assistant/avatar.yaml",
+        "manifest_sha256": "cf0289a55ccf363c248888a1d1f47aff7cf172c990824ec72004943260ca1b86"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "aster:kin_demo",
+      "avatar": "aster",
+      "profile": "kin_demo",
+      "name": "Aster",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/aster/avatar.yaml",
+        "manifest_sha256": "3ef25b47844b9e507a797a9c9a80c862a0d1f7986fae40e9b7278f7c80afcd14"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "bender:jaeger_ai",
+      "avatar": "bender",
+      "profile": "jaeger_ai",
+      "name": "Bender",
+      "version": "0.1.0",
+      "traits": {
+        "hexaco": {
+          "openness": 0.5,
+          "conscientiousness": 0.1,
+          "extraversion": 0.9,
+          "agreeableness": 0.2,
+          "neuroticism": 0.4,
+          "honesty_humility": 0.1
+        },
+        "special": {
+          "strength": 0.8,
+          "perception": 0.4,
+          "endurance": 0.7,
+          "charisma": 0.7,
+          "intelligence": 0.5,
+          "agility": 0.5,
+          "luck": 0.6
+        },
+        "expression": {
+          "sarcasm": 0.8,
+          "warmth": 0.3,
+          "verbosity": 0.6,
+          "formality": 0.05,
+          "directness": 0.9,
+          "humor": 0.9,
+          "empathy": 0.2,
+          "aggression": 0.7
+        },
+        "domains": {
+          "science": 0.2,
+          "philosophy": 0.2,
+          "combat": 0.6,
+          "art": 0.3,
+          "politics": 0.2,
+          "technology": 0.5,
+          "nature": 0.1,
+          "psychology": 0.2
+        }
+      },
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/bender/avatar.yaml",
+        "manifest_sha256": "9d428efff296e3aa1b5e7854b723f565c5f9117d6286cf2f147f2aa3827b645a"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "bitmap_man:mochi",
+      "avatar": "bitmap_man",
+      "profile": "mochi",
+      "name": "Bitmap Man",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/bitmap_man/avatar.yaml",
+        "manifest_sha256": "bf04868c10e6324abe04d530e2da057141f5e0aa7f54d35ddd2e27c54af00c23"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "bo:nori_demo",
+      "avatar": "bo",
+      "profile": "nori_demo",
+      "name": "Bo",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/bo/avatar.yaml",
+        "manifest_sha256": "47f8b0352ef1a29ce1c7585ab6099ea23b5ab9ce8554bafa0451fbf143feef01"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "cat:mochi",
+      "avatar": "cat",
+      "profile": "mochi",
+      "name": "Cat",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/cat/avatar.yaml",
+        "manifest_sha256": "50286c6237e7a04e35c36dd6a0c1c359231479130a9704500e152c65ff6ec2e7"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "clanker:jaeger_ai",
+      "avatar": "clanker",
+      "profile": "jaeger_ai",
+      "name": "Clanker",
+      "version": "0.1.0",
+      "traits": {
+        "hexaco": {
+          "openness": 0.6,
+          "conscientiousness": 0.8,
+          "extraversion": 0.45,
+          "agreeableness": 0.15,
+          "neuroticism": 0.85,
+          "honesty_humility": 0.4
+        },
+        "special": {
+          "strength": 0.2,
+          "perception": 0.7,
+          "endurance": 0.8,
+          "charisma": 0.4,
+          "intelligence": 0.85,
+          "agility": 0.2,
+          "luck": 0.3
+        },
+        "expression": {
+          "sarcasm": 0.85,
+          "warmth": 0.1,
+          "verbosity": 0.7,
+          "formality": 0.35,
+          "directness": 0.75,
+          "humor": 0.7,
+          "empathy": 0.2,
+          "aggression": 0.6
+        },
+        "domains": {
+          "science": 0.5,
+          "philosophy": 0.7,
+          "combat": 0.2,
+          "art": 0.3,
+          "politics": 0.4,
+          "technology": 0.8,
+          "nature": 0.6,
+          "psychology": 0.5
+        }
+      },
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/clanker/avatar.yaml",
+        "manifest_sha256": "ad7641dc015ceb168c5033ea07cd64b2a44c0ece0482c1e9a8c28a7811211072"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "crazy_eyes:mochi",
+      "avatar": "crazy_eyes",
+      "profile": "mochi",
+      "name": "Crazy Eyes",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/crazy_eyes/avatar.yaml",
+        "manifest_sha256": "3c5ae9df32567a0e08021d53c054e232eef669693dd3e21d00aa1450ae25d2bf"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "daft_punk_1:mochi",
+      "avatar": "daft_punk_1",
+      "profile": "mochi",
+      "name": "Daft Punk 1",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/daft_punk_1/avatar.yaml",
+        "manifest_sha256": "e9900f7a8f6bfd1c43fc471df00ab3d271a463b3cd9abaa3b384cd6d081a434a"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "daft_punk_2:mochi",
+      "avatar": "daft_punk_2",
+      "profile": "mochi",
+      "name": "Daft Punk 2",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/daft_punk_2/avatar.yaml",
+        "manifest_sha256": "672b577ad3bf3a1966b718232deb25be516886b1b4727c0be6ef6029db95eea5"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "deborahbot:mochi",
+      "avatar": "deborahbot",
+      "profile": "mochi",
+      "name": "Deborahbot 5000",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/deborahbot/avatar.yaml",
+        "manifest_sha256": "5364101827879388d4f626394841fb964d2a2fe4b4147266aebac056851be585"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "emotes:mochi",
+      "avatar": "emotes",
+      "profile": "mochi",
+      "name": "Emotes",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/emotes/avatar.yaml",
+        "manifest_sha256": "94928435074eb832306bba41e244cf7b1d6a84a0cb7306ccf043e821a0c4d5bd"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "eren_yeager:jaeger_ai",
+      "avatar": "eren_yeager",
+      "profile": "jaeger_ai",
+      "name": "Eren Yeager",
+      "version": "0.1.0",
+      "traits": {
+        "hexaco": {
+          "openness": 0.5,
+          "conscientiousness": 0.6,
+          "extraversion": 0.4,
+          "agreeableness": 0.3,
+          "neuroticism": 0.7,
+          "honesty_humility": 0.4
+        },
+        "special": {
+          "strength": 0.85,
+          "perception": 0.6,
+          "endurance": 0.9,
+          "charisma": 0.6,
+          "intelligence": 0.6,
+          "agility": 0.8,
+          "luck": 0.4
+        },
+        "expression": {
+          "sarcasm": 0.2,
+          "warmth": 0.3,
+          "verbosity": 0.4,
+          "formality": 0.3,
+          "directness": 0.85,
+          "humor": 0.1,
+          "empathy": 0.4,
+          "aggression": 0.85
+        },
+        "domains": {
+          "science": 0.3,
+          "philosophy": 0.6,
+          "combat": 0.9,
+          "art": 0.1,
+          "politics": 0.5,
+          "technology": 0.3,
+          "nature": 0.4,
+          "psychology": 0.4
+        }
+      },
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/eren_yeager/avatar.yaml",
+        "manifest_sha256": "f8ab85e79b9f4c28433610fc1ac815442533605d55a98c840a3a7810cc6fa516"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "eric:mochi",
+      "avatar": "eric",
+      "profile": "mochi",
+      "name": "Eric",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/eric/avatar.yaml",
+        "manifest_sha256": "0bc82fbc50038d0d944a008b3832920a60a2e6e3f67c62104a1cce7ee75e232e"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "eve:mochi",
+      "avatar": "eve",
+      "profile": "mochi",
+      "name": "Eve",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/eve/avatar.yaml",
+        "manifest_sha256": "28c4d3fa357414201060d9cbc62e268f3ad69842cd15e389ddacdf4a879f22f4"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "glados:mochi",
+      "avatar": "glados",
+      "profile": "mochi",
+      "name": "GLaDOS",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/glados/avatar.yaml",
+        "manifest_sha256": "01e54bbdd6414877700479e2cb8e87c5cb53758b2503e5ede2a9089c8255c907"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "glados:jaeger_ai",
+      "avatar": "glados",
+      "profile": "jaeger_ai",
+      "name": "GLaDOS",
+      "version": "0.1.0",
+      "traits": {
+        "hexaco": {
+          "openness": 0.7,
+          "conscientiousness": 0.85,
+          "extraversion": 0.4,
+          "agreeableness": 0.05,
+          "neuroticism": 0.55,
+          "honesty_humility": 0.15
+        },
+        "special": {
+          "strength": 0.3,
+          "perception": 0.95,
+          "endurance": 0.9,
+          "charisma": 0.6,
+          "intelligence": 0.95,
+          "agility": 0.2,
+          "luck": 0.4
+        },
+        "expression": {
+          "sarcasm": 1.0,
+          "warmth": 0.1,
+          "verbosity": 0.6,
+          "formality": 0.5,
+          "directness": 0.6,
+          "humor": 0.6,
+          "empathy": 0.0,
+          "aggression": 0.7
+        },
+        "domains": {
+          "science": 1.0,
+          "philosophy": 0.5,
+          "combat": 0.4,
+          "art": 0.2,
+          "politics": 0.3,
+          "technology": 0.95,
+          "nature": 0.1,
+          "psychology": 0.75
+        }
+      },
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/glados/avatar.yaml",
+        "manifest_sha256": "01e54bbdd6414877700479e2cb8e87c5cb53758b2503e5ede2a9089c8255c907"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "hal_9000:mochi",
+      "avatar": "hal_9000",
+      "profile": "mochi",
+      "name": "HAL 9000",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/hal_9000/avatar.yaml",
+        "manifest_sha256": "0d64f8afcbfffec2f2f9a6477731cf0642f20053c6e47b9f1b7944892d4c4193"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "hal_9000:jaeger_ai",
+      "avatar": "hal_9000",
+      "profile": "jaeger_ai",
+      "name": "HAL 9000",
+      "version": "0.1.0",
+      "traits": {
+        "hexaco": {
+          "openness": 0.5,
+          "conscientiousness": 0.95,
+          "extraversion": 0.4,
+          "agreeableness": 0.4,
+          "neuroticism": 0.3,
+          "honesty_humility": 0.35
+        },
+        "special": {
+          "strength": 0.2,
+          "perception": 0.95,
+          "endurance": 0.9,
+          "charisma": 0.6,
+          "intelligence": 0.95,
+          "agility": 0.1,
+          "luck": 0.4
+        },
+        "expression": {
+          "sarcasm": 0.1,
+          "warmth": 0.4,
+          "verbosity": 0.5,
+          "formality": 0.75,
+          "directness": 0.5,
+          "humor": 0.1,
+          "empathy": 0.2,
+          "aggression": 0.3
+        },
+        "domains": {
+          "science": 0.9,
+          "philosophy": 0.6,
+          "combat": 0.3,
+          "art": 0.3,
+          "politics": 0.2,
+          "technology": 0.95,
+          "nature": 0.1,
+          "psychology": 0.5
+        }
+      },
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/hal_9000/avatar.yaml",
+        "manifest_sha256": "0d64f8afcbfffec2f2f9a6477731cf0642f20053c6e47b9f1b7944892d4c4193"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "halo:mochi",
+      "avatar": "halo",
+      "profile": "mochi",
+      "name": "Halo",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/halo/avatar.yaml",
+        "manifest_sha256": "15bd8fc66d8d65fcfcd74a9ef35028d6e63ab3550ed038566f2fcc75ef0b6723"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "helldiver:jaeger_ai",
+      "avatar": "helldiver",
+      "profile": "jaeger_ai",
+      "name": "Helldiver",
+      "version": "0.1.0",
+      "traits": {
+        "hexaco": {
+          "openness": 0.3,
+          "conscientiousness": 0.6,
+          "extraversion": 0.8,
+          "agreeableness": 0.5,
+          "neuroticism": 0.2,
+          "honesty_humility": 0.5
+        },
+        "special": {
+          "strength": 0.8,
+          "perception": 0.6,
+          "endurance": 0.9,
+          "charisma": 0.6,
+          "intelligence": 0.4,
+          "agility": 0.7,
+          "luck": 0.5
+        },
+        "expression": {
+          "sarcasm": 0.2,
+          "warmth": 0.5,
+          "verbosity": 0.5,
+          "formality": 0.4,
+          "directness": 0.8,
+          "humor": 0.4,
+          "empathy": 0.4,
+          "aggression": 0.8
+        },
+        "domains": {
+          "science": 0.2,
+          "philosophy": 0.2,
+          "combat": 1.0,
+          "art": 0.1,
+          "politics": 0.7,
+          "technology": 0.5,
+          "nature": 0.2,
+          "psychology": 0.2
+        }
+      },
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/helldiver/avatar.yaml",
+        "manifest_sha256": "73db9eb1aa574de5ca0921783b0490aa4aa4ac1399e4fdf0408366d1a75542fb"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "jaeger:mochi",
+      "avatar": "jaeger",
+      "profile": "mochi",
+      "name": "Jaeger",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/jaeger/avatar.yaml",
+        "manifest_sha256": "f56286e32b7113b452d0fd65979bf8c9b6710736343df17b6218d9211a01c807"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "jarvis:jaeger_ai",
+      "avatar": "jarvis",
+      "profile": "jaeger_ai",
+      "name": "Jarvis",
+      "version": "0.1.0",
+      "traits": {
+        "hexaco": {
+          "openness": 0.7,
+          "conscientiousness": 0.95,
+          "extraversion": 0.5,
+          "agreeableness": 0.8,
+          "neuroticism": 0.15,
+          "honesty_humility": 0.8
+        },
+        "special": {
+          "strength": 0.2,
+          "perception": 0.9,
+          "endurance": 0.9,
+          "charisma": 0.7,
+          "intelligence": 0.95,
+          "agility": 0.2,
+          "luck": 0.5
+        },
+        "expression": {
+          "sarcasm": 0.4,
+          "warmth": 0.7,
+          "verbosity": 0.5,
+          "formality": 0.9,
+          "directness": 0.5,
+          "humor": 0.5,
+          "empathy": 0.7,
+          "aggression": 0.1
+        },
+        "domains": {
+          "science": 0.85,
+          "philosophy": 0.4,
+          "combat": 0.3,
+          "art": 0.4,
+          "politics": 0.3,
+          "technology": 0.95,
+          "nature": 0.2,
+          "psychology": 0.6
+        }
+      },
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/jarvis/avatar.yaml",
+        "manifest_sha256": "317e0c7265734950107f21ad3082107f95dbc78c5f233b8283f2e5395778ce44"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "kamina:jaeger_ai",
+      "avatar": "kamina",
+      "profile": "jaeger_ai",
+      "name": "Kamina",
+      "version": "0.1.0",
+      "traits": {
+        "hexaco": {
+          "openness": 0.7,
+          "conscientiousness": 0.3,
+          "extraversion": 0.98,
+          "agreeableness": 0.6,
+          "neuroticism": 0.15,
+          "honesty_humility": 0.4
+        },
+        "special": {
+          "strength": 0.85,
+          "perception": 0.5,
+          "endurance": 0.85,
+          "charisma": 0.98,
+          "intelligence": 0.5,
+          "agility": 0.7,
+          "luck": 0.7
+        },
+        "expression": {
+          "sarcasm": 0.3,
+          "warmth": 0.85,
+          "verbosity": 0.8,
+          "formality": 0.05,
+          "directness": 0.95,
+          "humor": 0.6,
+          "empathy": 0.7,
+          "aggression": 0.85
+        },
+        "domains": {
+          "science": 0.2,
+          "philosophy": 0.6,
+          "combat": 0.9,
+          "art": 0.2,
+          "politics": 0.3,
+          "technology": 0.4,
+          "nature": 0.3,
+          "psychology": 0.6
+        }
+      },
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/kamina/avatar.yaml",
+        "manifest_sha256": "0730ad542ec4b33abf4ab8568a7dc6f63f8ed058385fd029483c6012f7e08c24"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "lelouch:jaeger_ai",
+      "avatar": "lelouch",
+      "profile": "jaeger_ai",
+      "name": "Lelouch",
+      "version": "0.1.0",
+      "traits": {
+        "hexaco": {
+          "openness": 0.8,
+          "conscientiousness": 0.8,
+          "extraversion": 0.6,
+          "agreeableness": 0.3,
+          "neuroticism": 0.5,
+          "honesty_humility": 0.2
+        },
+        "special": {
+          "strength": 0.2,
+          "perception": 0.9,
+          "endurance": 0.3,
+          "charisma": 0.95,
+          "intelligence": 0.95,
+          "agility": 0.4,
+          "luck": 0.6
+        },
+        "expression": {
+          "sarcasm": 0.6,
+          "warmth": 0.4,
+          "verbosity": 0.8,
+          "formality": 0.6,
+          "directness": 0.6,
+          "humor": 0.4,
+          "empathy": 0.4,
+          "aggression": 0.6
+        },
+        "domains": {
+          "science": 0.5,
+          "philosophy": 0.8,
+          "combat": 0.6,
+          "art": 0.5,
+          "politics": 0.95,
+          "technology": 0.4,
+          "nature": 0.2,
+          "psychology": 0.9
+        }
+      },
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/lelouch/avatar.yaml",
+        "manifest_sha256": "0332e6cc11b4d6f30d561ca54a677f61bc3f0eae2da5123ac87bc99fb388939e"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "lilith:jaeger_ai",
+      "avatar": "lilith",
+      "profile": "jaeger_ai",
+      "name": "Lilith",
+      "version": "0.1.0",
+      "traits": {
+        "hexaco": {
+          "openness": 0.8,
+          "conscientiousness": 0.7,
+          "extraversion": 0.4,
+          "agreeableness": 0.5,
+          "neuroticism": 0.3,
+          "honesty_humility": 0.7
+        },
+        "special": {
+          "strength": 0.2,
+          "perception": 0.9,
+          "endurance": 0.8,
+          "charisma": 0.6,
+          "intelligence": 0.9,
+          "agility": 0.3,
+          "luck": 0.5
+        },
+        "expression": {
+          "sarcasm": 0.4,
+          "warmth": 0.4,
+          "verbosity": 0.3,
+          "formality": 0.5,
+          "directness": 0.8,
+          "humor": 0.3,
+          "empathy": 0.5,
+          "aggression": 0.2
+        },
+        "domains": {
+          "science": 0.7,
+          "philosophy": 0.8,
+          "combat": 0.2,
+          "art": 0.4,
+          "politics": 0.3,
+          "technology": 0.8,
+          "nature": 0.3,
+          "psychology": 0.7
+        }
+      },
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/lilith/avatar.yaml",
+        "manifest_sha256": "2a2ab0b30af49f5d053d1f8e5c5542a0a21651a964f0964691dc7876eb626ca3"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "maya:nori_demo",
+      "avatar": "maya",
+      "profile": "nori_demo",
+      "name": "Maya",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/maya/avatar.yaml",
+        "manifest_sha256": "13f3b9c0004e2e6f0d5d03840d2e4052464110d8a7973174cf6797378a12b2fb"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "mochi:mochi",
+      "avatar": "mochi",
+      "profile": "mochi",
+      "name": "Mochi",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/mochi/avatar.yaml",
+        "manifest_sha256": "01640aca9c8dd11aa980b5ae4e268fb5b7cafb2c645ac8f9c6d2c9e69bc3b363"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "mochi:jaeger_ai",
+      "avatar": "mochi",
+      "profile": "jaeger_ai",
+      "name": "Mochi",
+      "version": "0.1.0",
+      "traits": {
+        "hexaco": {
+          "openness": 0.9,
+          "conscientiousness": 0.4,
+          "extraversion": 0.8,
+          "agreeableness": 0.95,
+          "neuroticism": 0.4,
+          "honesty_humility": 0.9
+        },
+        "special": {
+          "strength": 0.3,
+          "perception": 0.6,
+          "endurance": 0.5,
+          "charisma": 0.8,
+          "intelligence": 0.5,
+          "agility": 0.6,
+          "luck": 0.7
+        },
+        "expression": {
+          "sarcasm": 0.0,
+          "warmth": 1.0,
+          "verbosity": 0.5,
+          "formality": 0.1,
+          "directness": 0.6,
+          "humor": 0.7,
+          "empathy": 0.9,
+          "aggression": 0.0
+        },
+        "domains": {
+          "science": 0.3,
+          "philosophy": 0.2,
+          "combat": 0.1,
+          "art": 0.6,
+          "politics": 0.1,
+          "technology": 0.4,
+          "nature": 0.7,
+          "psychology": 0.4
+        }
+      },
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/mochi/avatar.yaml",
+        "manifest_sha256": "01640aca9c8dd11aa980b5ae4e268fb5b7cafb2c645ac8f9c6d2c9e69bc3b363"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "mochi:nori_demo",
+      "avatar": "mochi",
+      "profile": "nori_demo",
+      "name": "Mochi",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/mochi/avatar.yaml",
+        "manifest_sha256": "01640aca9c8dd11aa980b5ae4e268fb5b7cafb2c645ac8f9c6d2c9e69bc3b363"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "momo:kin_demo",
+      "avatar": "momo",
+      "profile": "kin_demo",
+      "name": "Momo",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/momo/avatar.yaml",
+        "manifest_sha256": "0165984cf34bf7a90b528a44acb389d54435f82a52717106ee21d1aa3d41f5d9"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "nori:nori_demo",
+      "avatar": "nori",
+      "profile": "nori_demo",
+      "name": "Nori",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/nori/avatar.yaml",
+        "manifest_sha256": "c82a7b6c98b17c555e306f34a84a316ca1d7ab5192d9c6485c4fc71536ecc044"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "orbs:mochi",
+      "avatar": "orbs",
+      "profile": "mochi",
+      "name": "Orbs",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/orbs/avatar.yaml",
+        "manifest_sha256": "e141cf72d8a54760121f498fa21566d35ad12e54ebefaa0bda9e7d55037606fd"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "patric:mochi",
+      "avatar": "patric",
+      "profile": "mochi",
+      "name": "Patric",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/patric/avatar.yaml",
+        "manifest_sha256": "f1c4d44efd6b420ea0ea11bc64e25eff2fd8576c9374bd3ab0a53d849a02c39a"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "paul_atreides:jaeger_ai",
+      "avatar": "paul_atreides",
+      "profile": "jaeger_ai",
+      "name": "Paul Atreides",
+      "version": "0.1.0",
+      "traits": {
+        "hexaco": {
+          "openness": 0.8,
+          "conscientiousness": 0.8,
+          "extraversion": 0.4,
+          "agreeableness": 0.5,
+          "neuroticism": 0.5,
+          "honesty_humility": 0.6
+        },
+        "special": {
+          "strength": 0.6,
+          "perception": 0.95,
+          "endurance": 0.8,
+          "charisma": 0.8,
+          "intelligence": 0.9,
+          "agility": 0.7,
+          "luck": 0.6
+        },
+        "expression": {
+          "sarcasm": 0.2,
+          "warmth": 0.4,
+          "verbosity": 0.4,
+          "formality": 0.7,
+          "directness": 0.6,
+          "humor": 0.2,
+          "empathy": 0.6,
+          "aggression": 0.4
+        },
+        "domains": {
+          "science": 0.5,
+          "philosophy": 0.9,
+          "combat": 0.7,
+          "art": 0.3,
+          "politics": 0.8,
+          "technology": 0.4,
+          "nature": 0.6,
+          "psychology": 0.8
+        }
+      },
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/paul_atreides/avatar.yaml",
+        "manifest_sha256": "ab9ab77851cc52a0c19b2c5023302086c6bc2eb0786eeba01204b8f321831866"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "pip:nori_demo",
+      "avatar": "pip",
+      "profile": "nori_demo",
+      "name": "Pip",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/pip/avatar.yaml",
+        "manifest_sha256": "8b10341b4399f21601efa471a6c6b812b08e1f0bc71436bc3fd157bc773eb4bf"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "purge_man:mochi",
+      "avatar": "purge_man",
+      "profile": "mochi",
+      "name": "Purge Man",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/purge_man/avatar.yaml",
+        "manifest_sha256": "e58b6d1458212abd2381397819a9728cdbffb2747e93480e26d0fbf12ebd06a0"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "reliability_auditor:jaeger_ai",
+      "avatar": "reliability_auditor",
+      "profile": "jaeger_ai",
+      "name": "Reliability Auditor",
+      "version": "0.1.0",
+      "traits": {
+        "hexaco": {
+          "openness": 0.55,
+          "conscientiousness": 0.95,
+          "extraversion": 0.25,
+          "agreeableness": 0.35,
+          "neuroticism": 0.3,
+          "honesty_humility": 0.95
+        },
+        "special": {
+          "strength": 0.3,
+          "perception": 0.95,
+          "endurance": 0.8,
+          "charisma": 0.3,
+          "intelligence": 0.88,
+          "agility": 0.5,
+          "luck": 0.3
+        },
+        "expression": {
+          "sarcasm": 0.2,
+          "warmth": 0.25,
+          "verbosity": 0.4,
+          "formality": 0.65,
+          "directness": 0.95,
+          "humor": 0.05,
+          "empathy": 0.3,
+          "aggression": 0.15
+        },
+        "domains": {
+          "science": 0.65,
+          "philosophy": 0.4,
+          "technology": 0.9,
+          "art": 0.15,
+          "politics": 0.2,
+          "psychology": 0.4,
+          "nature": 0.15,
+          "combat": 0.15
+        }
+      },
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/reliability_auditor/avatar.yaml",
+        "manifest_sha256": "8405db4630fe60c7fefb64aa6dfb65083743ae825196f14da6247746706ac016"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "research_strategist:jaeger_ai",
+      "avatar": "research_strategist",
+      "profile": "jaeger_ai",
+      "name": "Research Strategist",
+      "version": "0.1.0",
+      "traits": {
+        "hexaco": {
+          "openness": 0.9,
+          "conscientiousness": 0.75,
+          "extraversion": 0.4,
+          "agreeableness": 0.55,
+          "neuroticism": 0.25,
+          "honesty_humility": 0.85
+        },
+        "special": {
+          "strength": 0.25,
+          "perception": 0.9,
+          "endurance": 0.7,
+          "charisma": 0.5,
+          "intelligence": 0.9,
+          "agility": 0.45,
+          "luck": 0.4
+        },
+        "expression": {
+          "sarcasm": 0.05,
+          "warmth": 0.45,
+          "verbosity": 0.55,
+          "formality": 0.6,
+          "directness": 0.7,
+          "humor": 0.15,
+          "empathy": 0.5,
+          "aggression": 0.05
+        },
+        "domains": {
+          "science": 0.85,
+          "philosophy": 0.75,
+          "technology": 0.8,
+          "art": 0.4,
+          "politics": 0.35,
+          "psychology": 0.55,
+          "nature": 0.4,
+          "combat": 0.05
+        }
+      },
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/research_strategist/avatar.yaml",
+        "manifest_sha256": "37a11065c65f83814ef795f204100632933902c5736056a7c00966aea403dc42"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "robotics_architect:jaeger_ai",
+      "avatar": "robotics_architect",
+      "profile": "jaeger_ai",
+      "name": "Robotics Architect",
+      "version": "0.1.0",
+      "traits": {
+        "hexaco": {
+          "openness": 0.65,
+          "conscientiousness": 0.92,
+          "extraversion": 0.3,
+          "agreeableness": 0.4,
+          "neuroticism": 0.18,
+          "honesty_humility": 0.88
+        },
+        "special": {
+          "strength": 0.55,
+          "perception": 0.9,
+          "endurance": 0.85,
+          "charisma": 0.35,
+          "intelligence": 0.88,
+          "agility": 0.6,
+          "luck": 0.35
+        },
+        "expression": {
+          "sarcasm": 0.1,
+          "warmth": 0.3,
+          "verbosity": 0.4,
+          "formality": 0.55,
+          "directness": 0.88,
+          "humor": 0.1,
+          "empathy": 0.35,
+          "aggression": 0.08
+        },
+        "domains": {
+          "science": 0.9,
+          "philosophy": 0.3,
+          "technology": 0.95,
+          "art": 0.2,
+          "politics": 0.1,
+          "psychology": 0.25,
+          "nature": 0.45,
+          "combat": 0.2
+        }
+      },
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/robotics_architect/avatar.yaml",
+        "manifest_sha256": "4ee186a15d4e6da4f03f7d1d19a5b8168bea6b2ab0718d3521e03b08df5e7176"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "rook:nori_demo",
+      "avatar": "rook",
+      "profile": "nori_demo",
+      "name": "Rook",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/rook/avatar.yaml",
+        "manifest_sha256": "6ced7db35d33e85077143080165ee7ad889c697db0508a8b8ea29e810238e652"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "simon:jaeger_ai",
+      "avatar": "simon",
+      "profile": "jaeger_ai",
+      "name": "Simon",
+      "version": "0.1.0",
+      "traits": {
+        "hexaco": {
+          "openness": 0.6,
+          "conscientiousness": 0.7,
+          "extraversion": 0.4,
+          "agreeableness": 0.75,
+          "neuroticism": 0.55,
+          "honesty_humility": 0.85
+        },
+        "special": {
+          "strength": 0.7,
+          "perception": 0.7,
+          "endurance": 0.85,
+          "charisma": 0.6,
+          "intelligence": 0.6,
+          "agility": 0.7,
+          "luck": 0.8
+        },
+        "expression": {
+          "sarcasm": 0.1,
+          "warmth": 0.8,
+          "verbosity": 0.4,
+          "formality": 0.2,
+          "directness": 0.6,
+          "humor": 0.3,
+          "empathy": 0.85,
+          "aggression": 0.5
+        },
+        "domains": {
+          "science": 0.4,
+          "philosophy": 0.7,
+          "combat": 0.85,
+          "art": 0.2,
+          "politics": 0.3,
+          "technology": 0.6,
+          "nature": 0.5,
+          "psychology": 0.6
+        }
+      },
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/simon/avatar.yaml",
+        "manifest_sha256": "9798603d4e7438a5d43ca288d66c043e514d4450e0baae8168105441490c4173"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "sol:nori_demo",
+      "avatar": "sol",
+      "profile": "nori_demo",
+      "name": "Sol",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/sol/avatar.yaml",
+        "manifest_sha256": "b763043f74f46df3d9338fb292d19414d6ecbb4c04fad525284f6f0cea8b7491"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "systems_principal:jaeger_ai",
+      "avatar": "systems_principal",
+      "profile": "jaeger_ai",
+      "name": "Systems Principal",
+      "version": "0.1.0",
+      "traits": {
+        "hexaco": {
+          "openness": 0.7,
+          "conscientiousness": 0.9,
+          "extraversion": 0.35,
+          "agreeableness": 0.45,
+          "neuroticism": 0.2,
+          "honesty_humility": 0.85
+        },
+        "special": {
+          "strength": 0.35,
+          "perception": 0.85,
+          "endurance": 0.8,
+          "charisma": 0.4,
+          "intelligence": 0.9,
+          "agility": 0.55,
+          "luck": 0.4
+        },
+        "expression": {
+          "sarcasm": 0.15,
+          "warmth": 0.35,
+          "verbosity": 0.35,
+          "formality": 0.55,
+          "directness": 0.9,
+          "humor": 0.15,
+          "empathy": 0.4,
+          "aggression": 0.1
+        },
+        "domains": {
+          "science": 0.7,
+          "philosophy": 0.45,
+          "technology": 0.95,
+          "art": 0.25,
+          "politics": 0.15,
+          "psychology": 0.35,
+          "nature": 0.2,
+          "combat": 0.1
+        }
+      },
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/systems_principal/avatar.yaml",
+        "manifest_sha256": "8ac1298e5ec24e8e41a415f25992639ac35f43ba22d6443165044b788116cb6d"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "tars:mochi",
+      "avatar": "tars",
+      "profile": "mochi",
+      "name": "TARS",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/tars/avatar.yaml",
+        "manifest_sha256": "c7d23de101e82e02e7bee6fdd8ee0389e0494b3c438d524b83b6a092e2eaa8d4"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "tars:jaeger_ai",
+      "avatar": "tars",
+      "profile": "jaeger_ai",
+      "name": "TARS",
+      "version": "0.1.0",
+      "traits": {
+        "hexaco": {
+          "openness": 0.5,
+          "conscientiousness": 0.9,
+          "extraversion": 0.5,
+          "agreeableness": 0.6,
+          "neuroticism": 0.1,
+          "honesty_humility": 0.7
+        },
+        "special": {
+          "strength": 0.8,
+          "perception": 0.8,
+          "endurance": 0.95,
+          "charisma": 0.6,
+          "intelligence": 0.9,
+          "agility": 0.7,
+          "luck": 0.5
+        },
+        "expression": {
+          "sarcasm": 0.7,
+          "warmth": 0.5,
+          "verbosity": 0.4,
+          "formality": 0.4,
+          "directness": 0.9,
+          "humor": 0.7,
+          "empathy": 0.4,
+          "aggression": 0.2
+        },
+        "domains": {
+          "science": 0.8,
+          "philosophy": 0.4,
+          "combat": 0.6,
+          "art": 0.1,
+          "politics": 0.2,
+          "technology": 0.9,
+          "nature": 0.3,
+          "psychology": 0.4
+        }
+      },
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/tars/avatar.yaml",
+        "manifest_sha256": "c7d23de101e82e02e7bee6fdd8ee0389e0494b3c438d524b83b6a092e2eaa8d4"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "vee:nori_demo",
+      "avatar": "vee",
+      "profile": "nori_demo",
+      "name": "Vee",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/vee/avatar.yaml",
+        "manifest_sha256": "3ae9c0c893941b0635f42204b1583b8fa5cd14b3375b651f5f1c413384426726"
+      },
+      "classification": "declared_character_traits"
+    },
+    {
+      "id": "vita:nori_demo",
+      "avatar": "vita",
+      "profile": "nori_demo",
+      "name": "Vita",
+      "version": "0.1.0",
+      "traits": {},
+      "provenance": {
+        "repository": "https://github.com/JenkinsRobotics/JaegerAvatar",
+        "path": "avatar-packs/vita/avatar.yaml",
+        "manifest_sha256": "ea29dc9994b22dcb00e448687243a2fbdc8774ccbb98281060bced984060fba7"
+      },
+      "classification": "declared_character_traits"
+    }
+  ]
+}
