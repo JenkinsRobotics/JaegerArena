@@ -76,7 +76,7 @@ def main():
         errors.append('Missing title, language, description, or viewport metadata')
     for ref in page.refs:
         check_ref(index, ref, page.ids)
-    active_docs = [ROOT / 'README.md', ROOT / 'AGENTS.md', SITE / 'SITE.md', SITE / 'BRAND.md', *sorted((ROOT / 'dev/docs').rglob('*.md'))]
+    active_docs = [ROOT / 'README.md', ROOT / 'RELEASE_NOTES.md', ROOT / 'AGENTS.md', SITE / 'SITE.md', SITE / 'BRAND.md', *sorted((ROOT / 'dev/docs').rglob('*.md'))]
     for path in active_docs:
         content = path.read_text()
         for ref in re.findall(r'\[[^\]\n]+\]\(([^)\s]+)\)', content):

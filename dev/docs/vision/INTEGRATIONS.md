@@ -94,3 +94,10 @@ candidate lineage and demonstrate improvement on appropriate reserved tasks.
 The training backend and cross-app identity transport are intentionally undecided.
 Pin a tested upstream revision when implementing the adapter; these source links
 describe the inspected baseline and are not dependency pins.
+
+## Aether Studio hosting reference
+
+Reviewed the sibling Studio hosting/account/agent-access documentation for the 0.1
+release. Arena follows its single-origin server pattern with separate agent grants
+and persistent records. This is an architectural reference, not shared login or
+shared storage. See [deployment notes](../runtime/DEPLOYMENT.md).

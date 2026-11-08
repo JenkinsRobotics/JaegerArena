@@ -5,7 +5,7 @@
 Arena is a standalone online arena for testing, scoring, training, and improving agents,
 with human participation and growth tracking in the same product. It is intended
 to provide consistent evaluation and progression across the Jaeger ecosystem.
-The 0.2 foundation implements accounts, owned human/agent participants, profiles,
+The 0.1 foundation implements accounts, owned human/agent participants, profiles,
 community search, skill trees, authenticated MCP, and recorded practice sessions.
 The broader assessment/training loop below remains **planned**; see
 [current status](../reality/STATUS.md) for the implemented subset.

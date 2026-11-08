@@ -1,0 +1,8 @@
+include VERSION README.md RELEASE_NOTES.md LICENSE AGENTS.md CONVENTIONS.md requirements.lock requirements-build.txt run.sh Dockerfile compose.yaml .env.example
+include deploy/Caddyfile deploy/arena.env.example
+recursive-include scripts *.py
+recursive-include tests *.py
+recursive-include dev/docs *.md
+recursive-include docs *.html *.css *.js *.png *.md
+include docs/.nojekyll
+global-exclude __pycache__ *.py[cod] *.sqlite3*

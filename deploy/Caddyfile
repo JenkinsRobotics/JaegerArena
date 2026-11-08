@@ -1,0 +1,4 @@
+{$ARENA_DOMAIN} {
+    reverse_proxy arena:8792
+    header Strict-Transport-Security "max-age=31536000"
+}

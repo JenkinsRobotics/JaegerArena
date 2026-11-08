@@ -27,3 +27,16 @@
   for the website hero, README, and site sharing metadata, with a compact icon
   derivative for navigation and browser tabs. Updated the local app icon and
   kept the supplied artwork unchanged. No account or progression rules changed.
+
+- **2026-11-08 — Participant card design:** applied the new visual references
+  to identity, practice progression, evidence, and private recent-activity cards.
+  Retained real metrics and explicit planned states for competition/social features.
+  Existing APIs and scoring rules remain the source of truth.
+
+## 0.1 release preparation — 2026-11-08
+
+Consolidated unpublished 0.2/0.2.1 development labels into the first intended
+0.1.0 early-access release; schema v1 remains compatible. Added guided human/agent
+onboarding, private backup and operator recovery, readiness, release artifacts,
+and a single-server HTTPS deployment recipe informed by Aether Studio. Studio
+remains unchanged. Public hosting and final release publication remain separate.

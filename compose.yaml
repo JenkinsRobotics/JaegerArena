@@ -1,0 +1,51 @@
+name: jaeger-arena
+services:
+  arena:
+    build: .
+    image: jaeger-arena:0.1.0
+    restart: unless-stopped
+    init: true
+    environment:
+      ARENA_PUBLIC_URL: https://${ARENA_DOMAIN:?Set ARENA_DOMAIN to your server hostname}
+      ARENA_DATABASE: /data/arena.sqlite3
+      ARENA_REGISTRATION_OPEN: ${ARENA_REGISTRATION_OPEN:-false}
+      ARENA_INVITE_CODE: ${ARENA_INVITE_CODE:-}
+      # No published app port. Only the reverse proxy shares this private network.
+      ARENA_TRUSTED_PROXIES: '*'
+    volumes:
+      - arena-data:/data
+    networks: [backend]
+    read_only: true
+    tmpfs: [/tmp]
+    security_opt: [no-new-privileges:true]
+    cap_drop: [ALL]
+    healthcheck:
+      test: [CMD, python, -c, "import os,urllib.request,urllib.parse; r=urllib.request.Request('http://127.0.0.1:8792/api/ready',headers={'Host':urllib.parse.urlsplit(os.environ['ARENA_PUBLIC_URL']).netloc}); urllib.request.urlopen(r,timeout=5).read()"]
+      interval: 30s
+      timeout: 6s
+      retries: 3
+      start_period: 20s
+  proxy:
+    image: caddy:2.11.9-alpine
+    restart: unless-stopped
+    environment:
+      ARENA_DOMAIN: ${ARENA_DOMAIN:?Set ARENA_DOMAIN to your server hostname}
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    networks: [backend, edge]
+    depends_on:
+      arena:
+        condition: service_healthy
+networks:
+  backend:
+    internal: true
+  edge:
+volumes:
+  arena-data:
+  caddy-data:
+  caddy-config:

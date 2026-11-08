@@ -146,6 +146,20 @@ def create_app(settings=None):
     def api_schema():
         return RedirectResponse('/openapi.json')
 
+    @app.get('/api/ready')
+    def ready():
+        # A liveness response alone cannot establish that durable records are readable.
+        import sqlite3
+        try:
+            with arena.db.connect() as db:
+                versions = [row[0] for row in db.execute('SELECT version FROM schema_version')]
+                db.execute('SELECT id FROM users LIMIT 1').fetchall()
+            if versions != [1]:
+                raise sqlite3.DatabaseError('Unsupported schema')
+        except sqlite3.Error:
+            return JSONResponse({'status': 'unavailable'}, status_code=503)
+        return {'status': 'ready', 'version': __version__, 'schema_version': 1}
+
     @app.post('/api/auth/register', status_code=201)
     def register(data: Register, response: Response):
         return set_session(response, arena.register(data))

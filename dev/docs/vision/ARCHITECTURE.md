@@ -1,6 +1,6 @@
 # Architecture
 
-Arena is an online service with a locally runnable 0.2 foundation. Public hosting
+Arena is an online service with a locally runnable 0.1 foundation. Public hosting
 is deferred. Its app, REST endpoints, and MCP tools call one service layer; neither
 the browser nor an agent computes its own authoritative awards.
 
@@ -84,7 +84,7 @@ for the contract direction and staged implementation.
 Tic-tac-toe will be the first game adapter. Add a match record with seats/opponents,
 legal turn controls, a versioned ruleset, and deterministic terminal results; bind
 each action to an authenticated seat. Reuse ownership, retry handling, event logs,
-and review presentation. No match or game logic is shipped in 0.2.
+and review presentation. No match or game logic is shipped in 0.1.
 
 Later adapters can represent coding tasks, simulations, and physical tests, with
 appropriate evidence, metrics/units, and trusted evaluation. Instrumented physical

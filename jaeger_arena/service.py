@@ -109,6 +109,10 @@ class Arena:
         if not row:
             raise ArenaError(401, 'Incorrect handle or password')
         with self.db.connect(write=True) as db:
+            # Recovery may have replaced the password while Argon2 was running.
+            current = db.execute('SELECT password_hash FROM users WHERE id=?', (row['id'],)).fetchone()
+            if not current or current['password_hash'] != row['password_hash']:
+                raise ArenaError(401, 'Credentials changed; sign in again')
             p = db.execute("SELECT id FROM participants WHERE owner_id=? AND kind='human'", (row['id'],)).fetchone()
             return self.issue(db, kind='session', owner_id=row['id'], participant_id=p['id'], access='play', label='Browser session', duration_s=86400)
 

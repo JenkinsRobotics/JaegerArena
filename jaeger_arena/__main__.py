@@ -10,6 +10,10 @@ def main():
     serve = commands.add_parser('serve', help='Run the Arena API, app, and authenticated MCP server')
     serve.add_argument('--host', default='127.0.0.1')
     serve.add_argument('--port', type=int, default=8792)
+    backup = commands.add_parser('backup', help='Create a private, consistent SQLite backup')
+    backup.add_argument('--output', type=Path, required=True)
+    reset = commands.add_parser('reset-password', help='Operator-assisted account recovery; revokes all account credentials')
+    reset.add_argument('handle')
     key = commands.add_parser('evaluator-key', help='Create a scoped evaluator credential in a private file')
     key.add_argument('--label', required=True)
     key.add_argument('--output', type=Path, required=True)
@@ -19,12 +23,32 @@ def main():
     args = parser.parse_args()
     if args.command in (None, 'serve'):
         import uvicorn
-        uvicorn.run('jaeger_arena.app:create_app', factory=True, host=getattr(args,'host','127.0.0.1'), port=getattr(args,'port',8792))
+        uvicorn.run('jaeger_arena.app:create_app', factory=True, host=getattr(args,'host','127.0.0.1'), port=getattr(args,'port',8792),
+                    proxy_headers=True, forwarded_allow_ips=os.getenv('ARENA_TRUSTED_PROXIES', '127.0.0.1'),
+                    limit_concurrency=64, timeout_keep_alive=5)
+        return
+    from .settings import Settings
+    if args.command == 'backup':
+        from .operations import backup_database
+        backup_database(Settings.from_env().database, args.output)
+        print('Private database backup saved and integrity checked.')
         return
     from .service import Arena
-    from .settings import Settings
     arena = Arena(Settings.from_env())
-    if args.command == 'evaluator-key':
+    if args.command == 'reset-password':
+        from getpass import getpass
+        from .operations import reset_password
+        if not os.isatty(0):
+            parser.error('Password recovery requires an interactive operator terminal')
+        password = getpass('New password: ')
+        if password != getpass('Confirm password: '):
+            parser.error('Passwords do not match')
+        try:
+            reset_password(arena, args.handle, password)
+        except ValueError as exc:
+            parser.error(str(exc))
+        print('Password replaced. All account sessions and participant credentials revoked; sign in and reissue agent keys.')
+    elif args.command == 'evaluator-key':
         # Exclusive creation and restrictive mode: never overwrite an existing credential.
         fd = os.open(args.output, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
         try:

@@ -7,7 +7,7 @@ catalogue, avatar trait references, scoped keys, authenticated MCP, durable sess
 reviews, practice XP, and duplicate-request protection. No games were added in this
 slice. See [status](../reality/STATUS.md) for verification and limitations.
 
-## Completed: world discovery (0.2.1)
+## Completed: world discovery (development milestone; included in 0.1.0)
 
 Six world groups, challenge membership and intended skill links, a browser catalog,
 and shared REST/MCP discovery. The Commons has practice adapters; the five domain

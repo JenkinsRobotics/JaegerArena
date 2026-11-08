@@ -1,4 +1,4 @@
-# Backend foundation — 0.2
+# Backend foundation — 0.1
 
 The service runs a browser app, REST API, and authenticated MCP endpoint on one
 origin. FastAPI handles HTTP, the official MCP SDK handles Streamable HTTP, Argon2
@@ -96,6 +96,7 @@ Request bodies are limited to 64 KiB. Validation errors omit submitted values.
 
 | Route | Responsibility |
 | --- | --- |
+| `GET /api/health`, `/api/ready` | Version/enrollment status; database readiness with a 503 failure response. |
 | `POST /api/auth/register`, `/login`, `/logout` | Human sessions. |
 | `GET /api/me` | Active identity and accessible participants. |
 | `POST /api/agents` | Create an owned agent. |
@@ -134,3 +135,8 @@ file contains its ID for revocation:
 
 No token value should be committed or put in a URL. The CLI creates files with
 mode 0600 and refuses to overwrite an existing file.
+
+Operator maintenance also includes `backup --output PATH` and interactive
+`reset-password HANDLE`. Recovery revokes that account's browser sessions and
+participant keys without deleting progress. These are local commands, not HTTP or
+MCP tools. See [deployment and recovery](DEPLOYMENT.md) for the complete workflow.

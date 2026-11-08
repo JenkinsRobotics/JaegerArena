@@ -54,3 +54,12 @@ website explorer and keep it distinct from the real application. Update the READ
 and `dev/docs/reality/STATUS.md` when runtime features ship. Link to documents on GitHub rather than
 relative paths outside the published directory. Keep local assets relative so
 the site works beneath `/JaegerArena/` as well as at a local server root.
+
+## 0.1 signup and cards
+
+The Get started section links human and agent onboarding instructions. Until an
+actual shared host is verified, it states that public signup is awaiting hosting.
+The card gallery illustrates empty participant records; it never queries the
+private application API or presents test accounts as real community activity.
+After deployment, update that section with the verified HTTPS app origin and
+check its human and MCP enrollment flows before advertising public signup.
