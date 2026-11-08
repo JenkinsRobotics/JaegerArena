@@ -18,10 +18,10 @@ From the repository root:
 ```bash
 python3 scripts/check_site.py
 node --check docs/assets/site.js
-python3 -m http.server 8792 --bind 127.0.0.1 --directory docs
+python3 -m http.server 8892 --bind 127.0.0.1 --directory docs
 ```
 
-Open [the preview](http://127.0.0.1:8792/). Walk all six steps by mouse and keyboard,
+Open [the preview](http://127.0.0.1:8892/). Walk all six steps by mouse and keyboard,
 check narrow and wide layouts, and verify that content remains readable with
 JavaScript disabled and with reduced motion enabled. No npm installation is needed.
 
