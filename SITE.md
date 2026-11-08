@@ -1,61 +1,53 @@
-# Deploying this site (the standard for ALL Jaeger repos)
+# Jaeger Arena website
 
-GitHub → Settings → Pages → Source: **Deploy from a branch** →
-Branch: `master`, Folder: **`/docs`** → Save. Live in ~1 minute at
-`https://jenkinsrobotics.github.io/<repo>/`.
+The public project site is intended to live at
+[jenkinsrobotics.github.io/JaegerArena](https://jenkinsrobotics.github.io/JaegerArena/).
+It explains the product and includes an illustrative six-step training-loop
+explorer. It does not run agents, store learner progress, or train models.
 
-(The main JROS site uses the older gh-pages-branch method; module repos
-standardize on the /docs folder — site ships atomically with code.)
+## Source and local preview
 
-# docs/ — the repo's GitHub Pages site
+`docs/` on `master` is the source of truth. `index.html`, `assets/site.css`,
+`assets/site.js`, and `assets/arena.svg` are dependency-free static files. The
+palette retains the inherited Jaeger dark/blue identity. The Arena mark and
+diagram are repository-native SVGs. No external fonts, analytics, or media are
+loaded. `.nojekyll` allows direct static serving.
 
-`index.html` is cloned from [JROS-site](https://github.com/JenkinsRobotics/JROS)'s
-own marketing page — same CSS design system (palette, nav, hero,
-feature-grid, architecture boxes, roadmap timeline, footer, the
-IntersectionObserver scroll-reveal script), parameterized with
-`{{PLACEHOLDER}}` markers instead of JROS's real content. Every asset is
-either inline (all CSS/JS) or a stable external link the original JROS
-site also uses (the Jenkins Robotics logo) — nothing to bundle.
+From the repository root:
 
-## Enable GitHub Pages
+```bash
+python3 scripts/check_site.py
+node --check docs/assets/site.js
+python3 -m http.server 8792 --bind 127.0.0.1 --directory docs
+```
 
-1. Push this repo with `docs/index.html` in place.
-2. On GitHub: **Settings → Pages → Build and deployment → Source:**
-   `Deploy from a branch`.
-3. **Branch:** your default branch, **folder:** `/gh-pages` (GitHub only
-   offers `/` or `/docs` in the folder dropdown for a non-`docs`-named
-   branch — if `/gh-pages` isn't selectable, either rename this directory
-   to `docs/` or push its contents to a dedicated `docs` branch at the
-   repo root instead).
-4. Save. The site publishes at `https://JenkinsRobotics.github.io/{{REPO_NAME}}/`.
+Open [the preview](http://127.0.0.1:8792/). Walk all six steps by mouse and keyboard,
+check narrow and wide layouts, and verify that content remains readable with
+JavaScript disabled and with reduced motion enabled. No npm installation is needed.
 
-## Customize
+## Publishing route
 
-Fill in every `{{PLACEHOLDER}}` in `index.html` — same markers as
-`README.md`, plus site-specific ones:
+This repository already has a `gh-pages` branch initialized for the website.
+Preserve it: GitHub Pages should serve **`gh-pages` / `/ (root)`** using
+**Deploy from a branch**. The template's conflicting `/docs` and `/gh-pages`
+folder instructions have been replaced by this single route.
 
-| Placeholder | What it is |
-|---|---|
-| `{{REPO_NAME}}` | Repo name — nav brand, hero wordmark, all GitHub links |
-| `{{DESCRIPTION}}` | One-line description — meta tags, hero lede, "what it is" |
-| `{{TAGLINE}}` | Short `// slogan`-style line under the hero logo |
-| `{{STATUS_LINE}}` | The pill badge text, e.g. `Latest release: 0.1.0` |
-| `{{HERO_HEADLINE_PLAIN}}` / `{{HERO_HEADLINE_ACCENT}}` | The big H1, split so the accent span gets the gradient treatment (mirrors JROS's "Where the agent **meets the metal**") |
-| `{{WHAT_HEADLINE}}` / `{{CAPABILITIES_HEADLINE}}` / `{{ROADMAP_HEADLINE}}` | Section headlines |
-| `{{FEATURE_N_*}}` | Feature-grid cards — delete/duplicate the `<div class="feature">` blocks to match however many real capabilities this repo has; keep the `feature dev` (dashed) variant for anything still `(planned)` |
-| `{{MILESTONE_N_*}}` | Roadmap timeline entries — `milestone done` / `milestone next` / plain (future) classes control the dot styling |
+After checks pass and source changes are committed, update `gh-pages` with the
+contents of `docs/` (including `.nojekyll`) and push that branch. Use a separate
+worktree so publication does not disturb the application checkout. If files are
+removed from `docs/`, remove the corresponding published copies too. Keep any
+intentional hosting configuration rather than blindly replacing the entire branch.
 
-Keep the CSS variables in `:root` untouched unless this repo deliberately
-wants a different accent color from the rest of the ecosystem — the
-point of cloning the design system is that every Jaeger repo's page
-looks like a family member, not a one-off.
+GitHub's Pages build then publishes that branch. Pushing `master` alone does not
+synchronize `gh-pages`; CI validates source but does not deploy it. Verify the
+Pages workflow and served site after each publication. See
+[GitHub's publishing-source guide](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+for the branch/folder setting and build troubleshooting.
 
-## What's different from the JROS site
+## Content maintenance
 
-The original has extra sections (Mind·Body·Soul pillars, a positioning
-table vs. ROS/Hermes, a detailed multi-step install flow) that are
-JaegerOS-specific framing, not generic template content — they're not
-reproduced here. Add them back into `index.html` (copy the section
-markup + its scoped `<style>` block from
-[JROS-site/index.html](https://github.com/JenkinsRobotics/JROS)) if a
-given repo wants that level of detail.
+The app is planned. Keep that status visible, preserve the illustrative label on
+the explorer, and update the README and `dev/docs/reality/STATUS.md` when runtime
+features are actually implemented. Link to source documents on GitHub rather than
+relative paths outside the published directory. Keep local assets relative so
+the site works beneath `/JaegerArena/` as well as at a local server root.
