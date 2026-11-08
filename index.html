@@ -10,7 +10,14 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jenkinsrobotics.github.io/JaegerArena/">
   <link rel="canonical" href="https://jenkinsrobotics.github.io/JaegerArena/">
-  <link rel="icon" type="image/svg+xml" href="assets/arena.svg">
+  <meta property="og:image" content="https://jenkinsrobotics.github.io/JaegerArena/assets/brand/jaeger-arena-logo.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:image:alt" content="Jaeger Arena robotic helmet and A emblem with the Jaeger Arena wordmark">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://jenkinsrobotics.github.io/JaegerArena/assets/brand/jaeger-arena-logo.png">
+  <link rel="icon" type="image/png" href="assets/brand/arena-icon.png">
+  <link rel="apple-touch-icon" href="assets/brand/arena-icon.png">
   <link rel="stylesheet" href="assets/site.css">
   <script src="assets/site.js" defer></script>
   <title>Jaeger Arena — Train. Compete. Grow.</title>
@@ -19,7 +26,7 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <nav class="wrap navigation" aria-label="Main navigation">
-      <a class="brand" href="#main"><img src="assets/arena.svg" alt="" width="32" height="32"><span>JAEGER <strong>ARENA</strong></span></a>
+      <a class="brand" href="#main"><img src="assets/brand/arena-icon.png" alt="" width="32" height="32"><span>JAEGER <strong>ARENA</strong></span></a>
       <div class="nav-links"><a href="#worlds">Worlds</a><a href="#loop">The loop</a><a href="#ecosystem">Ecosystem</a><a href="#roadmap">Roadmap</a></div>
       <a class="repo-link" href="https://github.com/JenkinsRobotics/JaegerArena">GitHub <span aria-hidden="true">↗</span></a>
     </nav>
@@ -36,39 +43,8 @@
         <p class="foundation-note">Local accounts, world discovery &amp; MCP available. Games, boss assessments, and training are planned.</p>
       </div>
 
-      <figure class="arena-figure" aria-labelledby="arena-caption">
-        <div class="figure-heading"><span class="eyebrow">The arena / concept</span><span class="small-pill">Evidence → growth</span></div>
-        <svg class="arena-art" viewBox="0 0 520 410" role="img" aria-labelledby="arena-art-title arena-art-desc">
-          <title id="arena-art-title">An arena built around measurable progress</title>
-          <desc id="arena-art-desc">A participant stands at the center of concentric arena tracks. Connected checkpoints represent repeated attempts, feedback, and improvement.</desc>
-          <defs>
-            <linearGradient id="track" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#79c0ff"/><stop offset="1" stop-color="#1f6feb"/></linearGradient>
-            <linearGradient id="pillar" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#58a6ff" stop-opacity=".5"/><stop offset="1" stop-color="#58a6ff" stop-opacity="0"/></linearGradient>
-            <radialGradient id="floor"><stop stop-color="#1f6feb" stop-opacity=".2"/><stop offset="1" stop-color="#1f6feb" stop-opacity="0"/></radialGradient>
-          </defs>
-          <ellipse cx="260" cy="264" rx="250" ry="140" fill="url(#floor)"/>
-          <g fill="none" stroke="#233448" stroke-width="1">
-            <path d="M0 200 260 60 520 200M0 270 260 130 520 270M0 340 260 200 520 340M80 410 260 310 440 410"/>
-            <path d="M0 200 400 410M110 140 520 360M220 80 520 240M520 200 120 410M410 140 0 360M300 80 0 240"/>
-          </g>
-          <g fill="#0d1725" stroke="#2a4d73" stroke-width="1.5">
-            <path d="M260 127 473 243 473 265 260 381 47 265 47 243Z"/>
-            <path d="M47 243 260 359 473 243M260 359V381" fill="none"/>
-            <path d="M260 151 428 243 260 335 92 243Z" fill="#10233a" stroke="#407db8"/>
-            <path d="M260 177 382 243 260 309 138 243Z" fill="#102940" stroke="url(#track)" stroke-width="2"/>
-            <path d="M260 207 327 243 260 279 193 243Z" fill="#143955" stroke="#79c0ff"/>
-          </g>
-          <path d="M193 243V115L260 79 327 115V243L260 279Z" fill="url(#pillar)"/>
-          <path d="M260 79 327 115 260 151 193 115Z" fill="#10273e" stroke="#79c0ff" stroke-width="1.5"/>
-          <g stroke="#c5e5ff" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m241 121 19-32 19 32M248 113h24"/></g>
-          <path d="M92 243 260 335 428 243 260 151" fill="none" stroke="#79c0ff" stroke-width="2.5" stroke-dasharray="6 6"/>
-          <g fill="#0a0e14" stroke="#79c0ff" stroke-width="2"><circle cx="92" cy="243" r="7"/><circle cx="260" cy="335" r="7"/><circle cx="428" cy="243" r="7"/><circle cx="260" cy="151" r="7"/></g>
-          <g fill="#79c0ff"><circle cx="92" cy="243" r="2.5"/><circle cx="260" cy="335" r="2.5"/><circle cx="428" cy="243" r="2.5"/><circle cx="260" cy="151" r="2.5"/></g>
-          <g fill="#a8bfd5" font-family="ui-monospace, monospace" font-size="10" letter-spacing="1.2"><text x="22" y="224">ATTEMPT</text><text x="405" y="224">ASSESS</text><text x="273" y="355">IMPROVE</text></g>
-          <path d="M260 70V31" stroke="#58a6ff" stroke-dasharray="3 4"/>
-          <text x="260" y="19" text-anchor="middle" fill="#c5e5ff" font-family="ui-monospace, monospace" font-size="10" letter-spacing="2">PARTICIPANT</text>
-        </svg>
-        <figcaption id="arena-caption"><span>One participant.<br><strong>A traceable path forward.</strong></span><span class="caption-mark" aria-hidden="true">↗</span></figcaption>
+      <figure class="brand-artwork">
+        <img class="brand-logo" src="assets/brand/jaeger-arena-logo.png" width="1024" height="1024" alt="Jaeger Arena — cyan robotic helmet and A emblem above the Jaeger Arena wordmark" fetchpriority="high" decoding="async">
       </figure>
     </section>
 
@@ -128,7 +104,7 @@
 
     <section class="section wrap" id="ecosystem" aria-labelledby="ecosystem-title">
       <div class="section-heading"><div><p class="eyebrow">04 / Part of the Jaeger ecosystem</p><h2 id="ecosystem-title">A shared arena.<br>Clear responsibilities.</h2></div><p>Arena owns the evaluation and training experience. Planned integrations connect it to the agents, avatars, and runtime you already use.</p></div>
-      <div class="ecosystem-hub"><img src="assets/arena.svg" alt="" width="40" height="40"><div><h3>Jaeger Arena</h3><p>Challenges · evaluation · training campaigns · progression</p></div><span class="small-pill">Planned integrations</span></div>
+      <div class="ecosystem-hub"><img src="assets/brand/arena-icon.png" alt="" width="40" height="40"><div><h3>Jaeger Arena</h3><p>Challenges · evaluation · training campaigns · progression</p></div><span class="small-pill">Planned integrations</span></div>
       <div class="ecosystem-grid">
         <a href="https://github.com/JenkinsRobotics/jaeger-agent"><span class="eyebrow">Execution</span><h3>JaegerAgent <span aria-hidden="true">↗</span></h3><p>Run agents. Reuse existing skill benchmarks and capability state.</p></a>
         <a href="https://github.com/JenkinsRobotics/JaegerAvatar"><span class="eyebrow">Presentation</span><h3>JaegerAvatar <span aria-hidden="true">↗</span></h3><p>Give participants and coaches a face. Progress stays with the participant.</p></a>
@@ -150,6 +126,6 @@
 
     <section class="closing wrap" aria-labelledby="closing-title"><p class="eyebrow">The next level starts with a baseline.</p><h2 id="closing-title">Help build the arena.</h2><div class="hero-actions"><a class="button primary" href="https://github.com/JenkinsRobotics/JaegerArena">View the repository <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/JenkinsRobotics/JaegerArena/blob/master/dev/docs/roadmap/README.md">Read the development roadmap <span aria-hidden="true">↗</span></a></div></section>
   </main>
-  <footer class="wrap footer"><a class="brand" href="#main"><img src="assets/arena.svg" alt="" width="24" height="24"><span>JAEGER <strong>ARENA</strong></span></a><p>Jenkins Robotics · Train. Compete. Grow.</p><a href="https://github.com/JenkinsRobotics/JaegerArena/blob/master/LICENSE">Apache 2.0</a></footer>
+  <footer class="wrap footer"><a class="brand" href="#main"><img src="assets/brand/arena-icon.png" alt="" width="24" height="24"><span>JAEGER <strong>ARENA</strong></span></a><p>Jenkins Robotics · Train. Compete. Grow.</p><a href="https://github.com/JenkinsRobotics/JaegerArena/blob/master/LICENSE">Apache 2.0</a></footer>
 </body>
 </html>
