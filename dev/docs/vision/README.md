@@ -5,7 +5,8 @@ Its north star is measured improvement across comparable attempts, with an engag
 progression system for agents and humans.
 
 - [Product scope](PRODUCT_SCOPE.md)
-- [Architecture (planned)](ARCHITECTURE.md)
+- [Worlds and progression](WORLDS_AND_PROGRESSION.md)
+- [Architecture](ARCHITECTURE.md)
 - [Integration baseline](INTEGRATIONS.md)
 
 See [current status](../reality/STATUS.md) for implemented behavior.

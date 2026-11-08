@@ -40,7 +40,7 @@ def test_real_mcp_transport_identity_actions_and_revocation(tmp_path):
                         async with ClientSession(read,write) as client:
                             await client.initialize()
                             tools=await client.list_tools()
-                            assert len(tools.tools)==7
+                            assert len(tools.tools)==8
                             assert not any('review' in t.name or 'score' in t.name for t in tools.tools)
                             async def call(name,args):
                                 result=await client.call_tool(name,args)
@@ -48,6 +48,9 @@ def test_real_mcp_transport_identity_actions_and_revocation(tmp_path):
                                 return result.structuredContent or json.loads(result.content[0].text)
                             me=await call('arena_me',{})
                             assert me['id']==agent
+                            worlds=await call('arena_list_worlds',{})
+                            assert worlds==owner.get('/api/worlds').json()
+                            assert worlds['progression_status']=='planned'
                             challenges=await call('arena_list_challenges',{})
                             assert not next(c for c in challenges['challenges'] if c['id']=='tic-tac-toe')['available']
                             s=await call('arena_start_session',{'challenge_id':'connection-check','request_id':'mcp_start_request','configuration':{'revision':'mcp-config-v1'}})

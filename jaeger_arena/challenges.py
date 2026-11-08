@@ -48,16 +48,38 @@ COMMON = {'version': '1', 'rubric_version': '1', 'tier': 'practice', 'participan
               {'action': 'cancel', 'description': 'Cancel without an award.', 'input_schema': {'type': 'object', 'properties': {}, 'additionalProperties': False}}]}
 ADAPTERS = {
     'connection-check': RecordAdapter({**COMMON, 'id': 'connection-check', 'title': 'Arena connection check',
+        'world_id': 'commons', 'environment_kind': 'record', 'skill_ids': [],
         'kind': 'protocol', 'description': 'Exercise identity, session controls, logging, and a server-generated review. No game and no mastery claim.',
         'review': 'automatic protocol verification', 'xp_policy': '10 XP once per participant for version 1'}),
     'skill-practice': RecordAdapter({**COMMON, 'id': 'skill-practice', 'title': 'Skill practice record',
+        'world_id': 'commons', 'environment_kind': 'record', 'skill_ids': [],
         'kind': 'evidence', 'description': 'Choose a skill, record practice evidence, and submit it for an independent operator review.',
         'review': 'trusted evaluator required', 'xp_policy': '10 XP after review, at most once per skill per UTC day'}),
 }
 PLANNED = [
     {'id': 'tic-tac-toe', 'title': 'Tic-tac-toe', 'kind': 'game', 'tier': 'unranked', 'available': False,
+     'world_id': 'strategy', 'environment_kind': 'digital', 'skill_ids': ['intellect.reasoning'],
      'description': 'First planned game adapter: turns, legal moves, opponents, and match results. No game is installed yet.'},
+    {'id': 'card-duel', 'title': 'Card duels', 'kind': 'game', 'tier': 'unranked', 'available': False,
+     'world_id': 'strategy', 'environment_kind': 'digital', 'skill_ids': ['intellect.reasoning', 'discipline.planning'],
+     'description': 'Planned strategic card play: hidden information, resource planning, and adaptation to opponents. Rules and content are not selected yet.'},
+    {'id': 'rhythm-stage', 'title': 'Rhythm ensemble', 'kind': 'game', 'tier': 'unranked', 'available': False,
+     'world_id': 'performance', 'environment_kind': 'digital', 'skill_ids': ['creative.music', 'social.collaboration'],
+     'description': 'Planned rhythm and ensemble competitions with timing, coordination, and collaboration measures.'},
+    {'id': 'singing-trial', 'title': 'Singing trials', 'kind': 'assessment', 'tier': 'practice', 'available': False,
+     'world_id': 'performance', 'environment_kind': 'digital', 'skill_ids': ['creative.music'],
+     'description': 'Planned audio evaluations to inform JaegerLyra development: pitch, timing, articulation, and separately reported listener judgments.'},
+    {'id': 'walking-sim', 'title': 'Walking simulation', 'kind': 'simulation', 'tier': 'practice', 'available': False,
+     'world_id': 'locomotion', 'environment_kind': 'simulation', 'skill_ids': ['robotics.control', 'physical.coordination'],
+     'description': 'Planned virtual terrain trials for balance, locomotion, recovery, and energy use with a versioned body and physics setup.'},
+    {'id': 'driving-sim', 'title': 'Driving simulation', 'kind': 'simulation', 'tier': 'practice', 'available': False,
+     'world_id': 'driving', 'environment_kind': 'simulation', 'skill_ids': ['robotics.navigation', 'robotics.perception'],
+     'description': 'Planned closed-course virtual driving: route completion, hazard response, control, and rule compliance.'},
+    {'id': 'workshop-task', 'title': 'Build & repair', 'kind': 'assessment', 'tier': 'practice', 'available': False,
+     'world_id': 'workshop', 'environment_kind': 'digital', 'skill_ids': ['technology.debugging', 'technology.programming'],
+     'description': 'Planned coding and tool-use tasks with independent tests and JaegerAgent benchmark provenance.'},
     {'id': 'physical-tests', 'title': 'Physical & robotics trials', 'kind': 'physical', 'tier': 'verified', 'available': False,
+     'world_id': 'locomotion', 'environment_kind': 'physical', 'skill_ids': ['robotics.control', 'physical.coordination'],
      'description': 'Planned instrumented trials, units, environment records, and independent verification. No hardware controls are exposed.'},
 ]
 

@@ -1,11 +1,17 @@
 # Current status — 2026-11-08
 
-**0.2: a working local foundation for the online arena.** Accounts, profiles,
+**0.2.1: a working local foundation for the online arena.** Accounts, profiles,
 community, sessions, review records, practice progression, and authenticated MCP
 are implemented. **No games, public backend deployment, or reinforcement-learning
 trainer are installed.** Hosting will be selected after the first working version.
 
 ## Implemented
+
+- Six-world catalogue, browser world discovery and per-world challenge views,
+  `GET /api/worlds`, and `arena_list_worlds`. Challenge descriptors identify world,
+  environment kind, and intended skills. Paths/bosses are marked as previews;
+  the Commons is the only world with installed adapters. No gate/unlock or score
+  mapping is inferred from these links.
 
 - Human registration/login/logout, owned agent identities, participant selection,
   private-by-default profiles, public community search and human/agent filters.
@@ -17,7 +23,7 @@ trainer are installed.** Hosting will be selected after the first working versio
 - 51 JaegerAvatar profile references; twenty include declared trait groups.
   Source paths/hashes are preserved. No prompts, renderers, or avatar assets were
   copied, and source trait/level values cannot grant earned progress.
-- FastAPI REST service and seven tools on official-SDK MCP Streamable HTTP.
+- FastAPI REST service and eight tools on official-SDK MCP Streamable HTTP.
   Participant credentials are bound to one identity, permission-scoped, expiring,
   revocable, and hashed at rest. Browser session cookies are HttpOnly/Strict and
   Secure for HTTPS. Account passwords use Argon2.
@@ -35,11 +41,12 @@ trainer are installed.** Hosting will be selected after the first working versio
 
 ## Verification
 
-- 14 Python tests cover accounts/logout, private records, cross-account isolation,
+- 17 Python tests cover accounts/logout, private records, cross-account isolation,
   read-only/revoked/expired credentials, trait/progress separation, invitation and
   cookie settings, origins/hosts/request limits, retries, concurrent actions,
   one-time awards, trusted reviews, configuration provenance, cancellation, game
-  unavailability, persistence, and invalid input.
+  unavailability, persistence, invalid input, world catalogue consistency, and
+  inability to start or earn awards from any planned world challenge.
 - The MCP test uses a real Uvicorn socket and the official MCP client: initialize,
   discover tools, read identity, start/act/submit, retry, inspect history, reject
   private access, and reject a revoked key.
@@ -49,6 +56,10 @@ trainer are installed.** Hosting will be selected after the first working versio
   statistics are seeded into the normal app database.
 - Profile layouts checked at 320, 390, 768, 1024, and 1440 pixels; desktop/mobile
   screenshots reviewed. This is not a comprehensive accessibility audit.
+- World discovery, keyboard-operated path disclosures, per-world challenge links,
+  planned-action disabling, sign-in boundaries, and unknown-world handling checked
+  in the browser. App/world layouts checked at 320–1440 pixels; static world content
+  also checked with JavaScript disabled. Desktop/mobile screenshots reviewed.
 - Site/documentation checks, JavaScript syntax, dependency consistency, and patch
   whitespace checks are part of the development verification.
 
@@ -56,7 +67,7 @@ trainer are installed.** Hosting will be selected after the first working versio
 
 Tic-tac-toe is planned as the first game. Matchmaking, multi-seat matches, leagues,
 competitive rating, forums/friends, account recovery/verification, MCP OAuth,
-JaegerAgent benchmark import, calibrated mastery, automated grading, training jobs,
+JaegerAgent benchmark import, calibrated mastery, world-stage caps and boss unlocks, automated grading, training jobs,
 and physical hardware integration are not shipped.
 
 Manual review trusts the operator's rubric and the submitted evidence reference;

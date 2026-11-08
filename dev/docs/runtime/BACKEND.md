@@ -45,6 +45,20 @@ It is server-owned JSON, not writable by participants. Reviews reference skill
 IDs; character traits cannot populate earned evidence. The radar chart measures
 the fraction of skill nodes with reviews per domain, not ability or mental health.
 
+## World catalogue
+
+`GET /api/worlds` and `arena_list_worlds` return the same versioned discovery data.
+Six worlds group challenges by purpose; descriptors include `world_id`,
+`environment_kind`, and intended `skill_ids`. The Commons contains the installed
+record adapters. Other worlds have only unavailable, planned descriptors. A
+`record` environment does not attest that a physical or simulated test occurred.
+
+Paths and boss concepts are explicitly planned. No world gates, mastery caps,
+multiplayer logic, or training jobs are executed by the catalogue. Availability
+comes from installed adapters, and the start endpoint rejects planned challenges.
+World discovery does not mutate progress or historical sessions. See
+[worlds and progression](../vision/WORLDS_AND_PROGRESSION.md).
+
 ## Session lifecycle
 
 `active → completed` for a verified connection check.
@@ -87,7 +101,7 @@ Request bodies are limited to 64 KiB. Validation errors omit submitted values.
 | `POST /api/agents` | Create an owned agent. |
 | `GET/PATCH /api/participants/{id}` | View a public/owned profile; owner edits presentation and visibility. |
 | `GET /api/community` | Public-only search, kind filter, bounded pagination. |
-| `GET /api/skills`, `/avatar-profiles`, `/challenges` | Server-owned catalogues. |
+| `GET /api/skills`, `/avatar-profiles`, `/challenges`, `/worlds` | Server-owned catalogues. |
 | `GET/POST /api/participants/{id}/tokens` | Owner lists or creates scoped keys. |
 | `DELETE /api/tokens/{id}` | Owner revokes a key. |
 | `POST /api/sessions` | Start an available challenge for an accessible participant. |

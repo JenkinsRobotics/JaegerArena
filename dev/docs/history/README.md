@@ -11,3 +11,8 @@
   session records, practice progression, trusted review, and authenticated MCP.
   The user selected hosting later and explicitly deferred games; tic-tac-toe is
   the intended first game, not part of this release.
+
+- **2026-11-08 — Worlds and progression (0.2.1):** added six-world discovery to
+  the app, REST, and MCP, plus planned games and boss concepts. Defined distinct
+  practice XP, mastery caps, league rank, training rewards, and simulation-to-physical
+  qualification. No games, bosses, progression gates, or trainers were installed.

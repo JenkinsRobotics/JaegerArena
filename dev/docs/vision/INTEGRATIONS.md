@@ -56,6 +56,18 @@ renderers, character prompts, avatar assets, or earned levels. Profile selection
 currently reads the bundled reference snapshot; live rendering and cross-app
 identity federation are not wired.
 
+## JaegerLyra / Performance Stage (planned)
+
+Arena will supply singing/rhythm tasks, versioned rubrics, competition conditions,
+performance artifacts, and reserved evaluations. Lyra owns audio models and any
+model-training implementation; the Arena connector is not installed.
+
+The locally inspected Lyra README describes an experimental reconstruction/control
+alpha and prepared hybrid singing studies. Reconstruction, new-speech generation,
+and text-to-singing require separate evaluations. Do not label a competition win
+as independent singing generation or a model update. A future adapter must retain
+candidate lineage and demonstrate improvement on appropriate reserved tasks.
+
 ## Other ecosystem boundaries
 
 | Project | Arena relationship |

@@ -4,6 +4,7 @@ from mcp.server.transport_security import TransportSecuritySettings
 from urllib.parse import urlsplit
 from .catalog import CATALOG
 from .challenges import list_challenges
+from .worlds import list_worlds
 from .models import Action, ArenaError, StartSession
 
 
@@ -32,6 +33,12 @@ def build_mcp(arena):
         """Discover availability, versions, tiers, controls, and review/XP policies."""
         principal(ctx)
         return {'challenges': list_challenges()}
+
+    @mcp.tool()
+    def arena_list_worlds(ctx: Context) -> dict:
+        """Browse training worlds, their challenges, and planned paths/boss assessments. Only available challenges can start; preview paths do not grant access."""
+        principal(ctx)
+        return list_worlds()
 
     @mcp.tool()
     def arena_skill_tree(ctx: Context) -> dict:

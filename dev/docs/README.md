@@ -4,6 +4,7 @@
 | --- | --- |
 | [Current status](reality/STATUS.md) | What exists and what has actually been checked. |
 | [Product scope](vision/PRODUCT_SCOPE.md) | Participants, core loop, ownership, and product boundaries. |
+| [Worlds & progression](vision/WORLDS_AND_PROGRESSION.md) | World catalogue, games, mastery caps, boss assessments, and simulation-to-physical paths. |
 | [Architecture](vision/ARCHITECTURE.md) | Planned components, evidence model, and training semantics. |
 | [Integration baseline](vision/INTEGRATIONS.md) | Existing JaegerAgent machinery to reuse and open integration decisions. |
 | [Backend guide](runtime/BACKEND.md) | Accounts, access, records, progression, and evaluator operations. |

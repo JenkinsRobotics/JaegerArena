@@ -1,0 +1,81 @@
+{
+  "schema_version": "arena.world_catalog/v1",
+  "catalog_version": "1",
+  "progression_status": "planned",
+  "worlds": [
+    {
+      "id": "commons",
+      "title": "The Commons",
+      "domain_ids": ["discipline", "ambition"],
+      "summary": "Your starting point: connect a participant, record practice, and build a traceable history.",
+      "path_preview": ["Connect", "Practice", "Review"],
+      "boss_preview": null,
+      "integration_targets": []
+    },
+    {
+      "id": "strategy",
+      "title": "Strategy Hall",
+      "domain_ids": ["intellect", "discipline", "mental"],
+      "summary": "Board games and card duels for reasoning, planning, resource management, and adapting to an opponent.",
+      "path_preview": ["Learn the rules", "Solve new positions", "Face varied opponents", "Qualify for a league"],
+      "boss_preview": {
+        "status": "planned",
+        "title": "The Strategist",
+        "description": "A reserved set of positions and opponents checks generalization before a harder tier opens. Winning one familiar game is not enough."
+      },
+      "integration_targets": ["JaegerAgent"]
+    },
+    {
+      "id": "performance",
+      "title": "Performance Stage",
+      "domain_ids": ["creative", "social", "mental"],
+      "summary": "Singing, rhythm play, and ensemble competitions that turn performances into useful feedback for voice and coordination.",
+      "path_preview": ["Match a note", "Perform a phrase", "Join an ensemble", "Perform an unseen set"],
+      "boss_preview": {
+        "status": "planned",
+        "title": "The Live Set",
+        "description": "An unseen performance set combines pitch, timing, articulation, and ensemble response. Listener preference is reported separately."
+      },
+      "integration_targets": ["JaegerLyra", "JaegerAvatar"]
+    },
+    {
+      "id": "locomotion",
+      "title": "Locomotion Grounds",
+      "domain_ids": ["robotics", "physical", "science"],
+      "summary": "Virtual bodies learn balance and walking. Separate, supervised physical trials measure whether those skills transfer.",
+      "path_preview": ["Stand in simulation", "Walk varied terrain", "Pass transfer assessment", "Supervised physical trial"],
+      "boss_preview": {
+        "status": "planned",
+        "title": "The Terrain Gauntlet",
+        "description": "Reserved terrain and disturbances test recovery and control. Passing a simulation never grants hardware permission."
+      },
+      "integration_targets": ["JaegerOS"]
+    },
+    {
+      "id": "driving",
+      "title": "Driving Circuit",
+      "domain_ids": ["robotics", "intellect", "mental"],
+      "summary": "Practice perception, navigation, and control on virtual routes before separately qualified closed-course execution.",
+      "path_preview": ["Virtual vehicle control", "Navigate new routes", "Respond to hazards", "Supervised closed course"],
+      "boss_preview": {
+        "status": "planned",
+        "title": "The Unfamiliar Route",
+        "description": "A reserved route combines navigation and hazard response under a fixed vehicle and sensor configuration. Physical access remains separately authorized."
+      },
+      "integration_targets": ["JaegerOS"]
+    },
+    {
+      "id": "workshop",
+      "title": "The Workshop",
+      "domain_ids": ["technology", "science", "ambition"],
+      "summary": "Build, debug, research, and use tools. Connect challenges to independent tests and existing agent benchmarks.",
+      "path_preview": ["Use a tool", "Repair a component", "Solve a new task", "Pass a regression suite"],
+      "boss_preview": {
+        "status": "planned",
+        "title": "The Integration Trial",
+        "description": "Complete a new task while preserving existing behavior across a reserved regression suite and a fixed tool budget."
+      },
+      "integration_targets": ["JaegerAgent"]
+    }
+  ]
+}

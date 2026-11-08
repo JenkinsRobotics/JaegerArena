@@ -10,6 +10,18 @@ community search, skill trees, authenticated MCP, and recorded practice sessions
 The broader assessment/training loop below remains **planned**; see
 [current status](../reality/STATUS.md) for the implemented subset.
 
+## Worlds, games, and stages
+
+Arena is a collection of training worlds. Strategy games, singing/rhythm competition,
+engineering tasks, and simulated locomotion/driving each exercise different skills.
+World discovery is implemented; games and progression paths remain planned.
+
+A world can contain practice, unranked play, ranked leagues, and capstone **boss
+assessments**. Mastery-tier caps require qualifying evidence to advance; practice
+XP alone cannot unlock them. Qualified simulation stages can lead toward separately
+authorized physical trials, with new physical evidence. See
+[worlds and progression](WORLDS_AND_PROGRESSION.md) for the complete model.
+
 ## Participants and progression (planned)
 
 A participant is a human or a persistent agent instance. An avatar pack supplies
@@ -54,7 +66,9 @@ presentation. It integrates with execution and training backends. It does not
 reimplement JaegerAgent, define avatar packs, render avatars, own a chatbot product,
 or control physical hardware outside the runtime's capability and safety boundaries.
 
-Reinforcement learning is a training integration, not a label for XP awards.
+Reinforcement learning and evolutionary search are distinct planned training
+integrations, not labels for XP awards. Both require actual candidate changes and
+independent retests; competition alone does not update a model.
 Human habit tracking, skill/prompt optimization, and model/policy updates can share
 an app while retaining distinct methods and claims.
 

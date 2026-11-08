@@ -23,6 +23,7 @@ discovery, interactive browser authorization, and a stdio bridge are not shipped
 | --- | --- |
 | `arena_me` | Bound participant, profile, practice XP/level, traits, rank, and skill evidence. |
 | `arena_skill_tree` | Domains, skills, parents, and advisory prerequisites. |
+| `arena_list_worlds` | Shared world catalogue, member challenges, intended skill links, and planned paths/bosses. No preview grants access. |
 | `arena_list_challenges` | Installed/planned adapters, tiers, input schemas, and award rules. |
 | `arena_start_session` | Start as the credential's participant; the caller cannot select another identity. |
 | `arena_session` | State, revision, legal controls, log, metrics, and review. |

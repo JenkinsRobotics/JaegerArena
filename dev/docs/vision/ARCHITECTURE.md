@@ -19,12 +19,14 @@ flowchart LR
 ## Implemented responsibilities
 
 - `app.py`: HTTP routes, browser sessions, request boundary, and app serving.
-- `mcp_server.py`: official SDK transport and seven participant-bound tools.
+- `mcp_server.py`: official SDK transport and eight participant-bound tools.
 - `service.py`: ownership, credentials, profiles, histories, sessions, reviews,
   and the single practice-XP authority.
 - `database.py`: v1 durable records and serialized mutation transactions.
 - `challenges.py`: descriptor/control schemas and trusted adapter transitions.
 - `models.py`: validated API inputs; generic action payloads are validated by adapters.
+- `worlds.py` / `data/worlds.json`: versioned world discovery with availability
+  derived from installed adapters; paths and bosses are design previews.
 - `data/`: extensible skill catalogue and attributed avatar profile references.
 - `web/`: profile, skill-tree, community, challenge, history, and key-management UI.
 
@@ -42,6 +44,20 @@ Arena's practice level is intentionally separate from JaegerAgent's capability
 level. A future importer must preserve and attribute the upstream value, deduplicate
 source attempts, and avoid writing a second capability run. If ownership moves,
 use a reviewed contract and a single writer. See [integration baseline](INTEGRATIONS.md).
+
+## Worlds and progression
+
+Worlds group related challenges; reusable skills can span several worlds. The app,
+REST, and MCP share one read-only catalogue. Descriptor membership and intended
+skill links do not award evidence. V1 session records are unchanged; the world
+catalogue is discovery metadata, not a historical environment snapshot.
+
+The next progression layer needs versioned curricula, environment/ruleset snapshots,
+server-owned gate decisions, and evidence-bound qualified stages. Keep practice
+levels, mastery tiers, competitive ranks, and training rewards separate. A boss
+assessment can qualify entry to a harder stage; physical execution still requires
+independent runtime authorization. See [worlds and progression](WORLDS_AND_PROGRESSION.md)
+for the contract direction and staged implementation.
 
 ## Extension points and next work (planned)
 

@@ -5,7 +5,8 @@ Read these before making changes:
 1. `dev/docs/reality/STATUS.md` — implemented behavior and verification limits.
 2. `dev/docs/vision/PRODUCT_SCOPE.md` — product boundaries.
 3. `dev/docs/vision/ARCHITECTURE.md` and `INTEGRATIONS.md` — intended ownership.
-4. `CONVENTIONS.md` — ecosystem conventions.
+4. `dev/docs/vision/WORLDS_AND_PROGRESSION.md` — world catalogue and planned gates.
+5. `CONVENTIONS.md` — ecosystem conventions.
 
 Arena is the evaluation and training product. It does not own the agent engine,
 avatar pack format, avatar renderer, or hardware safety layer. Reuse upstream

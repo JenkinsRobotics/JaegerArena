@@ -8,8 +8,10 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import FileResponse, JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from starlette.datastructures import Headers
+from . import __version__
 from .catalog import AVATARS, CATALOG
 from .challenges import list_challenges
+from .worlds import list_worlds
 from .mcp_server import build_mcp
 from .models import Action, AgentCreate, ArenaError, Login, ProfileUpdate, Register, Review, StartSession, TokenCreate
 from .service import Arena
@@ -106,7 +108,7 @@ def create_app(settings=None):
         async with mcp.session_manager.run():
             yield
 
-    app = FastAPI(title='Jaeger Arena', version='0.2.0', lifespan=lifespan, docs_url=None, redoc_url=None)
+    app = FastAPI(title='Jaeger Arena', version=__version__, lifespan=lifespan, docs_url=None, redoc_url=None)
     app.state.arena = arena
     app.add_middleware(Boundary, arena=arena)
 
@@ -137,7 +139,7 @@ def create_app(settings=None):
 
     @app.get('/api/health')
     def health():
-        return {'status': 'ok', 'version': '0.2.0', 'runtime': 'foundation', 'mcp_path': '/mcp/',
+        return {'status': 'ok', 'version': __version__, 'runtime': 'foundation', 'mcp_path': '/mcp/',
                 'registration_open': settings.registration_open, 'invitation_required': bool(settings.invite_code)}
 
     @app.get('/api/docs', include_in_schema=False)
@@ -173,6 +175,10 @@ def create_app(settings=None):
     @app.get('/api/challenges')
     def challenges():
         return {'challenges': list_challenges()}
+
+    @app.get('/api/worlds')
+    def worlds():
+        return list_worlds()
 
     @app.get('/api/community')
     def community(q: str = Query('', max_length=100), kind: str = Query('', pattern='^(human|agent)?$'),
